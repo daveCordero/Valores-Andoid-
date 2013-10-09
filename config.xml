@@ -19,7 +19,7 @@
 <gap:splash src="phoneGap/XHDPI_landscape.png" gap:platform="android" gap:density="xhdpi" />
 
 <description>
-Una iniciativa de BAC y Grupo Nación para el rescate de valores en la sociedad costarricense. Desarrollado por el departamento de Libros para Todos de Grupo Nación.
+Una iniciativa de BAC y Grupo Nación para el rescate de valores en la sociedad costarricense. Esta aplicación ha sido desarrollada por el departamento de Libros para Todos de Grupo Nación en el año 2013.
 </description>
 
 <preference name="permissions" value="none" />

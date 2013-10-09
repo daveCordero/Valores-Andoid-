@@ -12,6 +12,10 @@ var isiPad   	   = navigator.userAgent.toLowerCase().indexOf("ipad");
 var isiPod   	   = navigator.userAgent.toLowerCase().indexOf("ipod");
 var isSafari   	   = navigator.userAgent.toLowerCase().indexOf('safari');
 var android 	   = navigator.userAgent.toLowerCase().indexOf("android");
+
+var nua = navigator.userAgent;
+var is_android = ((nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1) && !(nua.indexOf('Chrome') > -1));
+
 //fin vars user agent para meta viewport scale
 </script>
 
@@ -64,7 +68,7 @@ function auWin() {
 		audioElement.setAttribute('src', 'audio/win.mp3');
 	}
 	else if (android > -1) {
-		alert('android 16');
+		//alert('android 16');
 		audioElement.setAttribute('src', 'audio/win.mp3');
 	}
 	else {
@@ -94,7 +98,8 @@ function aubtn() {
 		//alert('ipad');
 		audioElement.setAttribute('src', 'audio/tap_ok.mp3');
 	}
-	else if (android > -1) {
+	//else if (android > -1) {
+	else if (is_android > -1) {
 		//alert('android 16');
 		audioElement.setAttribute('src', 'audio/tap_ok.ogg');
 	}
@@ -125,7 +130,8 @@ function aubtnNo(){
 		//alert('ipad');
 		audioElement.setAttribute('src', 'audio/tap_noOk.mp3');
 	}
-	else if (android > -1) {
+	//else if (android > -1) {
+	else if (is_android > -1) {
 		//alert('android 16');
 		audioElement.setAttribute('src', 'audio/tap_noOk.ogg');
 	}
