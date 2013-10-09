@@ -48,11 +48,15 @@ var is_android = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
 var score = 0;
 var meta = '';
 
-var audioElement = document.createElement('audio');
-/*audioElement.setAttribute('autoplay', 'autoplay');
+/*var audioElement = document.createElement('audio');
+audioElement.setAttribute('autoplay', 'autoplay');
 $.get();*/
 
 function auWin() {
+	var audioElement = document.createElement('audio');
+	audioElement.setAttribute('autoplay', 'autoplay');
+	$.get();
+	
 	//iOS y Safari no reconocen .ogg
 	if(isiPhone > -1) {
 		//alert('iphone 22');
@@ -79,13 +83,13 @@ function auWin() {
 	}
 	//fin iOS y Safari no reconocen .ogg
 	
-	audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();
-	
 	audioElement.play();
 }
 
 function aubtn() {
+	var audioElement = document.createElement('audio');
+	audioElement.setAttribute('autoplay', 'autoplay');
+	$.get();
 	
 	//iOS y Safari no reconocen .ogg
 	if(isiPhone > -1) {
@@ -120,6 +124,9 @@ function aubtn() {
 }
 
 function aubtnNo(){
+	var audioElement = document.createElement('audio');
+	audioElement.setAttribute('autoplay', 'autoplay');
+	$.get();
 	
 	//iOS y Safari no reconocen .ogg
 	if(isiPhone > -1) {
