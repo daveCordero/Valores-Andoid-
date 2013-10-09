@@ -13,8 +13,11 @@ var isiPod   	   = navigator.userAgent.toLowerCase().indexOf("ipod");
 var isSafari   	   = navigator.userAgent.toLowerCase().indexOf('safari');
 var android 	   = navigator.userAgent.toLowerCase().indexOf("android");
 
-var nua = navigator.userAgent;
-var is_android = ((nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1) && !(nua.indexOf('Chrome') > -1));
+//var nua = navigator.userAgent;
+//var  = ((nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1) && !(nua.indexOf('Chrome') > -1));
+
+var ua = navigator.userAgent.toLowerCase();
+var is_android = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
 
 //fin vars user agent para meta viewport scale
 </script>
