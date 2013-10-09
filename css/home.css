@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-image:url(../img/bg.jpg);
+}
+
+/*#pantalla {
+	background:#CCC;
+	width:960px;
+	height:600px;
+}*/
+
+#titlehome {
+	background:url(../img/home/titleHome.png) no-repeat 0px 0px;
+	position:absolute;
+	top:13px;
+	left:50%;
+	width:383px;
+	height:115px;
+	margin:0px 0px 0px -191px;
+}
+
+.bthome {
+	/*background:#FFF;*/
+	background-position:center bottom;
+	background-repeat:no-repeat;
+	
+	width:314px;
+	height:195px;
+	z-index:1000;
+}
+.bthome:hover {
+	height:200px;
+	margin-bottom:5px;
+}
+
+#bthome1 {
+	background-image:url(../img/home/bt_home_1.png);
+	top:116px;
+	left:0px;
+}
+#bthome2 {
+	background-image:url(../img/home/bt_home_2.png);
+	top:116px;
+	left:323px;
+}
+#bthome3 {
+	background-image:url(../img/home/bt_home_3.png);
+	top:116px;
+	left:646px;
+}
+#bthome4 {
+	background-image:url(../img/home/bt_home_4.png);
+	top:320px;
+	left:0px;
+}
+#bthome5 {
+	background-image:url(../img/home/bt_home_5.png);
+	top:320px;
+	left:323px;
+}
+#bthome6 {
+	background-image:url(../img/home/bt_home_6.png);
+	top:320px;
+	left:646px;
+}
+

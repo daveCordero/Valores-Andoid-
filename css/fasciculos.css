@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.btfasciculo {
+	/*background:#FFF;*/
+	background-repeat:no-repeat;
+	background-position:center bottom;
+	
+	width:314px;
+	height:195px;
+	z-index:1000;
+	
+	top:315px;
+}
+.btfasciculo:hover {
+	height:200px;
+	margin-bottom:5px;
+}
+#btfas1 {
+	background-image:url(../img/bt_fas_1.png);
+	left:0px;
+}
+#btfas2 {
+	background-image:url(../img/bt_fas_2.png);
+	left:324px;
+}
+#btfas3 {
+	background-image:url(../img/bt_fas_3.png);
+	left:646px;
+}

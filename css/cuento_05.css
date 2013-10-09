@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#general {
+	background:url(../img/cuento_05/bg_cuento_gigante.png) no-repeat center 0px;
+}
+
+#tituloCuento {
+	background-image:url(../img/titulo_cuento_s05.png);
+}
+
+/*#boxValores {
+	background:#666;
+	font-size:13px !important;
+}*/
+
+#titleZoomGigante {
+	background-image:url(../img/titulo_zoom_s05.png);
+}
+

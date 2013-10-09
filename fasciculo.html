@@ -1,0 +1,566 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="author" content="David Herrera Cordero | Libros para Todos GN" />
+
+<script language="javascript" type="text/javascript">
+//vars user agent para meta viewport scale
+var isiPhone 	   = navigator.userAgent.toLowerCase().indexOf("iphone");
+var isiPad   	   = navigator.userAgent.toLowerCase().indexOf("ipad");
+var isiPod   	   = navigator.userAgent.toLowerCase().indexOf("ipod");
+var isSafari   	   = navigator.userAgent.toLowerCase().indexOf('safari');
+var android 	   = navigator.userAgent.toLowerCase().indexOf("android");
+//fin vars user agent para meta viewport scale
+</script>
+
+<!-- apple -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="apple-touch-icon" sizes="57×57" 		href="img/touch-icon-iphone-114.png" />
+<link rel="apple-touch-icon" sizes="114×114" 	href="img/touch-icon-iphone-114.png" />
+<link rel="apple-touch-icon" sizes="72×72" 		href="img/touch-icon-ipad-144.png" />
+<link rel="apple-touch-icon" sizes="144×144" 	href="img/touch-icon-ipad-144.png" />
+<!-- /apple -->
+
+<title>Valores | BAC | La Nación | Fascículo</title>
+<link rel="shortcut icon" href="favicon.ico">
+
+
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/fasciculos.css" rel="stylesheet" type="text/css" />
+
+
+<script type="text/javascript" src="js/googleapis/jquery.min.js"></script>
+<script type="text/javascript" src='js/jquery.transit.min.js'></script>
+
+
+<script language="javascript" type="text/javascript">
+var audioElement = document.createElement('audio');
+audioElement.setAttribute('autoplay', 'autoplay');
+$.get();
+
+function aubtn() {
+	//iOS y Safari no reconocen .ogg
+	if(isiPhone > -1) {
+		//alert('iphone 22');
+		audioElement.setAttribute('src', 'audio/tap_ok.mp3');
+	}
+	else if(isiPod > -1) {
+		//alert('ipod');
+		audioElement.setAttribute('src', 'audio/tap_ok.mp3');
+	}
+	else if(isiPad > -1) {
+		//alert('ipad');
+		audioElement.setAttribute('src', 'audio/tap_ok.mp3');
+	}
+	else if(isSafari > -1) {
+		//alert('ipad');
+		audioElement.setAttribute('src', 'audio/tap_ok.mp3');
+	}
+	else if (android > -1) {
+		//alert('android 16');
+		audioElement.setAttribute('src', 'audio/tap_ok.ogg');
+	}
+	else {
+		audioElement.setAttribute('src', 'audio/tap_ok.ogg');
+	}
+	//fin iOS y Safari no reconocen .ogg
+	
+	audioElement.play();
+}
+
+$(window).load(function(){
+	$("#pre-load-web").fadeOut(1000,function(){
+		//eliminamos la capa de precarga
+	    $(this).remove();
+	    //permitimos scroll
+	    //$("body").css({"overflow-y":"auto"});
+	});
+});
+
+function nextPage(){
+	window.location.href = proxPantalla;
+}
+
+function flipPage(){
+	$('#contenido').transition({
+		perspective: '1000px',
+		rotateY: '180deg',
+		opacity: 0,
+	}, 500, 'out',function(){nextPage();});
+}
+
+function nubesIn() {
+	var timerNube01in = setTimeout(function() {
+		//$('#nube01').css
+		$('#nube01').fadeIn();
+		nube01LR();
+		clearTimeout(timerNube01in);
+	}, 1600);
+	var timerNube02in = setTimeout(function() {
+		$('#nube02').fadeIn();
+		nube02RL();
+		clearTimeout(timerNube02in);
+	}, 1300);
+	var timerNube03in = setTimeout(function() {
+		$('#nube03').fadeIn();
+		nube03RL();
+		clearTimeout(timerNube03in);
+	}, 1000);
+}//fin nubesIn
+
+function nube01LR() {
+	var timerNube01LR = setTimeout(function() {
+		$('#nube01').animate({ 'left':800 }, 20000, function(){ $(this).fadeOut(500); });
+		clearTimeout(timerNube01LR);
+	}, 2000);
+}//fin nube01LR
+
+function nube02RL() {
+	var timerNube02RL = setTimeout(function() {
+		$('#nube02').animate({ 'left':60 }, 22000, function(){ $(this).fadeOut(500); });
+		clearTimeout(timerNube02RL);
+	}, 7000);
+}//fin nube02RL
+
+function nube03RL() {
+	var timerNube03RL = setTimeout(function() {
+		$('#nube03').animate({ 'left':30 }, 32000, function(){ $(this).fadeOut(500); });
+		clearTimeout(timerNube03RL);
+	}, 15000);
+	var timerNubesIn2 = setTimeout(function() {
+		$('#nube01').css({ 'left':'90px' });
+		$('#nube02').css({ 'left':'710px' });
+		$('#nube03').css({ 'left':'770px' });
+		clearTimeout(timerNubseIn2);
+	}, 50000);
+	var timerNubesIn3 = setTimeout(function() {
+		//alert('hola');
+		nubesIn();
+		clearTimeout(timerNubesIn3);
+	}, 51000);
+}//fin nube02RL
+
+
+// Listen for orientation changes
+window.addEventListener("orientationchange", function() {
+  //alert(window.orientation); //Announce the new orientation number
+  if (window.orientation == 0){
+	  $("#turnScreen").fadeIn(0);
+  }
+  /*chrome no funciona en esta orientacion
+  if (window.orientation == 180){
+	  $("#turnScreen").fadeIn(0);
+  }*/
+  if (window.orientation == 90){
+	  $("#turnScreen").fadeOut(0);
+  }
+  if (window.orientation == -90){
+	  $("#turnScreen").fadeOut(0);
+  }
+}, false);
+
+
+var fasciculo = location.search.substr(1);//alert(fasciculo);
+switch(fasciculo) {//selecciona css y carga funciones según var fasciculo
+	
+	case '01'://principe feliz
+		$('head').append('<link href="css/fasciculo_01.css" rel="stylesheet" type="text/css" />');
+		function golonUp() {
+			var timerGolonUp = setTimeout(function() {
+				$('#golondrina').animate({ 'top':0 }, 1000, "swing", function(){ golonDown(); });
+				clearTimeout(timerGolonUp);
+			}, 10);
+		}//fin golonUp
+		function golonDown() {
+			var timerGolonDown = setTimeout(function() {
+				$('#golondrina').animate({ 'top':40 }, 1500, "swing", function(){ golonUp(); });
+				clearTimeout(timerGolonDown);
+			}, 10);
+		}//fin golonDown
+	break;
+	
+	case '02'://la bella y la bestia
+		$('head').append('<link href="css/fasciculo_02.css" rel="stylesheet" type="text/css" />');
+		function sombreroUp() {
+			var timerSombUp = setTimeout(function() {
+				$('#sombrero').animate({ 'top':10 }, 700, "swing", function(){ sombreroDown(); });
+				clearTimeout(timerSombUp);
+			}, 10);
+		}//fin sombreroUp
+		function sombreroDown() {
+			var timerSombDown = setTimeout(function() {
+				$('#sombrero').animate({ 'top':30 }, 700, "swing", function(){ sombreroUp(); });
+				clearTimeout(timerSombDown);
+			}, 10);
+		}//fin sombreroDown
+	break;
+	
+	case '03'://pulgarcito
+		$('head').append('<link href="css/fasciculo_03.css" rel="stylesheet" type="text/css" />');
+		function pulgarDown() {
+			var timerPulgarDown = setTimeout(function() {
+				$('#mano').fadeOut(50);
+				$('#pulgar').animate({ 'top':140 }, 700, "swing", function(){ pulgarWaitDown(); });
+				clearTimeout(timerPulgarDown);
+			}, 10);
+		}//fin pulgarDown
+		function pulgarWaitDown() {
+			var timerPulgarWait = setTimeout(function() {
+				pulgarUp();
+				clearTimeout(pulgarWaitDown);
+			}, 2000);
+		}//fin pulgarWaitDown
+		function pulgarUp() {
+			var timerPulgarUp = setTimeout(function() {
+				$('#pulgar').animate({ 'top':86 }, 700, "swing", function(){ pulgarWaitUp(); $('#mano').fadeIn(50); });
+				clearTimeout(timerPulgarUp);
+			}, 10);
+		}//fin pulgarUp
+		function pulgarWaitUp() {
+			var timerPulgarUp = setTimeout(function() {
+				pulgarDown();
+				clearTimeout(pulgarWaitUp);
+			}, 3000);
+		}//fin pulgarWaitDown
+	break;
+	
+	case '04'://el abuelo y el nieto
+		$('head').append('<link href="css/fasciculo_04.css" rel="stylesheet" type="text/css" />');
+		function mariposa01() {
+			var timerMari01 = setTimeout(function() {
+				$('#mari').animate({ 'top':100 }, 500, "swing", function(){ mariposa02(); });
+				$('#mari').addClass('mari02').removeClass('mari01');
+				clearTimeout(timerMari01);
+			}, 10);
+		}//fin mariposa01
+		function mariposa02() {
+			var timerMari02 = setTimeout(function() {
+				$('#mari').animate({ 'top':120 }, 300, "swing", function(){ mariposa01(); });
+				$('#mari').addClass('mari01').removeClass('mari02');
+				clearTimeout(timerMari02);
+			}, 10);
+		}//fin mariposa02
+	break;
+	
+	case '05'://el gigante egoista
+		$('head').append('<link href="css/fasciculo_05.css" rel="stylesheet" type="text/css" />');
+		function pajarito01() {
+			var timerPaja01 = setTimeout(function() {
+				$('#pajarito').animate({ 'top':33, 'left':225 }, 300, "swing", function(){ pajarito02(); });
+				//$('#pajarito').animate({ 'top':38, 'left':240 }, 300, "swing", function(){ pajarito01(); });
+				clearTimeout(timerPaja01);
+			}, 1000);
+		}//fin pajarito01
+		function pajarito02() {
+			var timerPaja02 = setTimeout(function() {
+				$('#pajarito').animate({ 'top':63, 'left':210 }, 250, "swing", function(){ pajarito03(); });
+				clearTimeout(timerPaja02);
+			}, 10);
+		}//fin pajarito02
+		function pajarito03() {
+			var timerPaja03 = setTimeout(function() {
+				$('#pajarito').animate({ 'top':53, 'left':200 }, 150, "swing", function(){ pajarito04(); });
+				clearTimeout(timerPaja03);
+			}, 1000);
+		}//fin pajarito03
+		function pajarito04() {
+			var timerPaja04 = setTimeout(function() {
+				$('#pajarito').animate({ 'top':58, 'left':215 }, 150, "swing", function(){ pajarito05(); });
+				clearTimeout(timerPaja04);
+			}, 60);
+		}//fin pajarito04
+		function pajarito05() {
+			var timerPaja05 = setTimeout(function() {
+				$('#pajarito').animate({ 'top':40, 'left':215 }, 200, "swing", function(){ pajarito06(); });
+				clearTimeout(timerPaja05);
+			}, 1000);
+		}//fin pajarito05
+		function pajarito06() {
+			var timerPaja06 = setTimeout(function() {
+				$('#pajarito').animate({ 'top':35, 'left':242 }, 100, "swing", function(){ pajarito07(); });
+				clearTimeout(timerPaja06);
+			}, 10);
+		}//fin pajarito06
+		function pajarito07() {
+			var timerPaja07 = setTimeout(function() {
+				pajarito01();
+				clearTimeout(timerPaja07);
+			}, 1500);
+		}//fin pajarito07
+	break;
+	
+	case '06'://la flor mas bonita
+		$('head').append('<link href="css/fasciculo_06.css" rel="stylesheet" type="text/css" />');
+		function dragon01() {
+			var timerdragon01 = setTimeout(function() {
+				$('#dragon').animate({ 'left':60, 'top':110 }, 700, "swing", function(){ dragon02(); });
+				clearTimeout(timerdragon01);
+			}, 1000);
+		}//fin dragon01
+		function dragon02() {
+			var timerdragon02 = setTimeout(function() {
+				$('#dragon').animate({ 'left':50, 'top':100 }, 400, "swing", function(){ dragon03(); });
+				clearTimeout(timerdragon02);
+			}, 10);
+		}//fin dragon02
+		function dragon03() {
+			var timerdragon03 = setTimeout(function() {
+				$('#dragon').animate({ 'left':40, 'top':100 }, 400, "swing", function(){ dragon04(); });
+				clearTimeout(timerdragon03);
+			}, 100);
+		}//fin dragon03
+		function dragon04() {
+			var timerdragon045 = setTimeout(function() {
+				$('#dragon').animate({ 'left':30, 'top':110 }, 300, "swing", function(){ dragon05(); });
+				clearTimeout(timerdragon04);
+			}, 200);
+		}//fin dragon04
+		function dragon05() {
+			var timerdragon05 = setTimeout(function() {
+				$('#dragon').animate({ 'left':15, 'top':100 }, 500, "swing", function(){ dragon06(); });
+				clearTimeout(timerdragon05);
+			}, 100);
+		}//fin dragon05
+		function dragon06() {
+			var timerdragon06 = setTimeout(function() {
+				$('#dragon').animate({ 'left':0, 'top':110 }, 500, "swing", function(){ dragon07(); });
+				clearTimeout(timerdragon06);
+			}, 100);
+		}//fin dragon06
+		function dragon07() {
+			var timerdragon07 = setTimeout(function() {
+				$('#dragon').animate({ 'left':70 }, 3000, "swing", function(){ dragon08(); });
+				clearTimeout(timerdragon07);
+			}, 1500);
+		}//fin dragon07
+		function dragon08() {
+			var timerdragon08 = setTimeout(function() {
+				$('#dragon').animate({ 'top':100 }, 500, "swing", function(){ dragon09(); });
+				clearTimeout(timerdragon08);
+			}, 300);
+		}//fin dragon08
+		function dragon09() {
+			var timerdragon09 = setTimeout(function() {
+				dragon01();
+				clearTimeout(timerdragon09);
+			}, 2500);
+		}//fin dragon09
+	break;
+	
+	//default: alert('vacío');
+	
+}//fin switch css y funciones
+
+$(document).ready(function() {
+	
+	// precarga
+	//eliminamos el scroll de la pagina
+	$("body").css({"overflow-y":"hidden"});
+	//guardamos en una variable el alto del que tiene tu browser que no es lo mismo que del DOM
+	var alto=$(window).height();
+	//agregamos en el body un div que sera que ocupe toda la pantalla y se muestra encima de todo
+	$("body").append("<div id='pre-load-web'><div id='imagen-load'><img src='img/preload35.gif' /></div>");
+	//le damos el alto
+	$("#pre-load-web").css({height:alto+"px"});
+	//esta sera la capa que esta dento de la capa que muestra un gif
+	$("#imagen-load").css({"margin-top":(alto/2)-30+"px"});
+	// fin precarga
+	
+	//define meta viewport scale
+	if(isiPhone > -1) {
+		//alert('iphone 22');
+		$("head").append('<meta name="viewport" content="user-scalable=yes, initial-scale=0.490, maximum-scale=0.490" />');
+		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
+		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
+	}
+	else if(isiPod > -1) {
+		//alert('ipod');
+		$("head").append('<meta name="viewport" content="user-scalable=yes, initial-scale=0.490, maximum-scale=0.490" />');
+		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
+		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
+	}
+	else if (android > -1) {
+		//alert('android 16');
+		$("head").append('<meta name="viewport" content="width=1200px, target-densitydpi=device-dpi" />');
+		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
+	}
+	else {
+		$("head").append('<meta name="viewport" content="height=600px, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />');
+		$("#logosBlock").append('<a href="https://www.bac.net/bacsanjose/" target="_blank" class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></a> <a href="http://www.gruponacion.co.cr" target="_blank" class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></a>');
+		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
+	}
+	//fin define meta viewport scale
+	
+	
+	//previene rebote iOS
+	document.body.addEventListener('touchmove', function(event) {
+	  event.preventDefault();
+	}, false);
+	//fin previene rebote iOS
+	
+	if (window.orientation == 0){
+		$("#turnScreen").fadeIn(0);
+	}
+	
+	/* modal dialogs */
+	//select all the a tag with name equal to modal
+	$('a[name=modal]').click(function(e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		
+		//Get the A tag
+		var id = $(this).attr('href');
+	
+		//Get the screen height and width
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
+	
+		//Set heigth and width to mask to fill up the whole screen
+		$('#mask').css({'width':maskWidth,'height':maskHeight});
+		
+		//transition effect		
+		$('#mask').fadeIn(300);	
+		$('#mask').fadeTo("slow",0.8);	
+	
+		//Get the window height and width
+		var winH = $(window).height();
+		var winW = $(window).width();
+              
+		//Set the popup window to center
+		$(id).css('top',  winH/2-$(id).height()/2);
+		$(id).css('left', winW/2-$(id).width()/2);
+	
+		//transition effect
+		$(id).fadeIn(300); 
+	
+	});
+	
+	//if close button is clicked
+	$('.window .close').click(function (e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		
+		$('#mask').hide();
+		$('.window').hide();
+	});		
+	
+	//if mask is clicked
+	$('#mask').click(function () {
+		$(this).hide();
+		$('.window').hide();
+	});			
+
+	$(window).resize(function () {
+	 
+ 		var box = $('#boxes .window');
+ 
+        //Get the screen height and width
+        var maskHeight = $(document).height();
+        var maskWidth = $(window).width();
+      
+        //Set height and width to mask to fill up the whole screen
+        $('#mask').css({'width':maskWidth,'height':maskHeight});
+               
+        //Get the window height and width
+        var winH = $(window).height();
+        var winW = $(window).width();
+
+        //Set the popup window to center
+        box.css('top',  winH/2 - box.height()/2);
+        box.css('left', winW/2 - box.width()/2);
+	 
+	});
+	/* fin modal dialogs */
+	
+	/* carga elementos según var fasciculo */
+	switch(fasciculo) {
+	
+		case '01'://principe feliz
+			$('#contenedorFas').append('<div class="disblock posAbsolute" id="fasPri"></div> <div class="disblock posAbsolute" id="golondrina"></div>');
+			nubesIn();
+			golonUp();
+		break;
+		
+		case '02'://la bella y la bestia
+			$('#contenedorFas').append('<div class="disblock posAbsolute" id="sombrero"></div>');
+			nubesIn();
+			sombreroUp();
+		break;
+		
+		case '03'://pulgarcito
+			$('#contenedorFas').append('<div class="disblock posAbsolute" id="pulgar"></div> <div class="disblock posAbsolute" id="caracol"></div> <div class="disblock posAbsolute" id="mano"></div>');
+			pulgarDown();
+		break;
+		
+		case '04'://el abuelo y el nieto
+			$('#contenedorFas').append('<div class="disblock posAbsolute mari01" id="mari"></div>');
+			mariposa01();
+		break;
+		
+		case '05'://el gigante egoista
+			$('#contenedorFas').append('<div class="disblock posAbsolute" id="pajarito"></div>');
+			pajarito01();
+		break;
+		
+		case '06'://la flor mas bonita
+			$('#contenedorFas').append('<div class="disblock posAbsolute" id="chica"></div> <div class="disblock posAbsolute" id="dragon"></div>');
+			dragon01();
+		break;
+		
+	}//fin switch elementos
+	
+	/* rendereado x js para obtener var fasciculo */
+	$('#contenedorFas').append('<a class="disblock posAbsolute btfasciculo alpha80hover tran100" href="juegos.html?' 	 + fasciculo + '" onclick="flipPage();" id="btfas1"></a>');
+	$('#contenedorFas').append('<a class="disblock posAbsolute btfasciculo alpha80hover tran100" href="cuento.html?' 	 + fasciculo + '" onclick="flipPage();" id="btfas2"></a>');
+	$('#contenedorFas').append('<a class="disblock posAbsolute btfasciculo alpha80hover tran100" href="ninos_home.html?' + fasciculo + '" onclick="flipPage();" id="btfas3"></a>');
+	
+}); // fin document ready
+
+</script>
+
+
+</head>
+<body>
+
+
+<div id="contenido">
+	
+	<div id="general">
+		
+		<div class="pantallas floatNoneClearBoth marginAuto" id="contenedorFas">
+        	
+			<a class="disblock posAbsolute tran100 btnLista" id="btHome" href="javascript:var proxPantalla = 'index.html'" onClick="flipPage();"></a>
+            <!--<a class="disblock posAbsolute tran100 btnLista" id="btAtras" href="javascript:var proxPantalla = 'index.html'" onClick="flipPage();"></a>-->
+			
+			<div class="disNone posAbsolute" id="nube01"></div>
+            <div class="disNone posAbsolute" id="nube02"></div>
+            <div class="disNone posAbsolute" id="nube03"></div>
+			
+			<div class="disblock posAbsolute" id="titlehome"></div>
+            
+			<div id="logosBlock" class="disblock posAbsolute">
+            	<!--<a href="https://www.bac.net/bacsanjose/" target="_blank" class="disblock floatL alpha80hover tran100 patrocinador" id="logoBac"></a>
+                <a href="http://www.gruponacion.co.cr" target="_blank" class="disblock floatR alpha80hover tran100 patrocinador" id="logoNacion"></a>-->
+            </div><!--/#logosBlock-->
+			
+        </div><!-- fin pantalla -->
+		
+	</div><!--/fin general-->
+	
+	
+
+</div><!-- fin contenido -->
+
+<div id="turnScreen"></div>
+
+<script language="Javascript">
+	document.oncontextmenu = function(){return false};
+	document.onselectstart = function(){return false};
+	//document.onkeydown = function(){return false};
+</script>
+
+</body>
+</html>

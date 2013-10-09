@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#titleJuegos { background-image:url(../img/titulo_juegos_s01.png); }
+
+/* redips */
+.tableDrag {
+	/*background:#333;*/
+	top:100px;
+	left:0px;
+}
+.drag {
+	width: 130px;
+	height:130px;
+}
+/* fin redips */
+
+#fosforo1 {
+	background:url(../img/juegos/fas_01/j02/fos_1.png) no-repeat center 0px;
+	top:155px;
+	right:0px;
+	width:265px;
+	height:105px;
+	padding:200px 0px 0px 0px;
+	text-align:center;
+}
+#fosforo2 {
+	background:url(../img/juegos/fas_01/j02/fos_3.png) no-repeat center 0px;
+	top:130px;
+	right:0px;
+	width:265px;
+	height:125px;
+	padding:215px 0px 0px 0px;
+	text-align:center;
+}
+#fosforo3 {
+	background:url(../img/juegos/fas_01/j02/fos_1.png) no-repeat center 0px;
+	top:155px;
+	right:0px;
+	width:265px;
+	height:105px;
+	padding:200px 0px 0px 0px;
+	text-align:center;
+}
+
+.totalFos {
+	font-size:42px;
+}
+.totalFos:before {
+	content:"Total: ¢ ";
+}
+
+.mon500 {
+	background:url(../img/juegos/fas_01/j02/mon500.png) no-repeat center;
+}
+.mon100 {
+	background:url(../img/juegos/fas_01/j02/mon100.png) no-repeat center;
+}
+.mon50 {
+	background:url(../img/juegos/fas_01/j02/mon50.png) no-repeat center;
+}
+.mon25 {
+	background:url(../img/juegos/fas_01/j02/mon25.png) no-repeat center;
+}
+.mon10 {
+	background:url(../img/juegos/fas_01/j02/mon10.png) no-repeat center;
+}
+.mon5 {
+	background:url(../img/juegos/fas_01/j02/mon5.png) no-repeat center;
+}
+.green_cell {
+	background:url(../img/juegos/fas_01/j02/moneda130px.png) no-repeat center;
+}
+
+

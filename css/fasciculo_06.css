@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-image:url(../img/bg.jpg);/*grad radial amarillo-celeste*/
+}
+
+#general {
+	background:url(../img/fasciculo_06/bg.png) no-repeat center 0px;
+}
+
+#chica {
+	background:url(../img/fasciculo_06/chica.png) no-repeat 0px 0px;
+	
+	width:243px;
+	height:373px;
+	
+	top:49px;
+	left:364px;
+	
+	z-index:5;
+}
+
+#dragon {
+	background:url(../img/fasciculo_06/dragon.png) no-repeat 0px 0px;
+	
+	width:894px;
+	height:288px;
+	
+	top:100px;
+	left:70px;
+	
+	z-index:4;
+}
+

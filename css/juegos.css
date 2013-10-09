@@ -1,0 +1,220 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-image:url(../img/bg.jpg);
+	background-position:center -700px;
+}
+
+#titleJuegos {
+	/*background-color:#CCC;*/
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:525px;
+	height:77px;
+	top:17px;
+	left:50%;
+	margin:0px 0px 0px -262px;
+}
+
+.btjuego {
+	/*background-color:#FFF;*/
+	background-repeat:no-repeat;
+	
+	width:260px;
+	height:350px;
+	z-index:1000;
+	
+	color:#FFF;
+	font-size:24px;
+	line-height:24px;
+}
+.btjuego span {
+	background:url(../img/bt_juego_span.png) no-repeat top center;
+	width:220px;
+	height:80px;
+	margin-top:270px;
+	padding-top:15px;
+}
+
+#btjuego1 {
+	background-image:url(../img/img_j01.png);
+	background-position:center 70px;
+	top:116px;
+	left:0px;
+}
+#btjuego1:hover {
+	background-position:center 65px;
+}
+
+#btjuego2 {
+	background-image:url(../img/img_j02.png);
+	background-position:center 38px;
+	top:116px;
+	left:324px;
+}
+#btjuego2:hover {
+	background-position:center 33px;
+}
+
+#btjuego3 {
+	background-image:url(../img/img_j03.png);
+	background-position:center 5px;
+	top:116px;
+	left:646px;
+}
+#btjuego3:hover {
+	background-position:center 0px;
+}
+
+#welcome {
+	background:#FFF;
+	
+	top:50%;
+	left:50%;
+	
+	width:670px;
+	height:250px;
+	padding:30px;
+	margin:-150px 0px 0px -350px;
+}
+
+#tituloApp {
+	/*background:#CCC;*/
+	border-bottom:#CCC solid 2px;
+	
+	width:460px;
+	top:40px;
+	left:230px;
+	
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 20px 0px;
+	
+	font-size:60px;
+	color:#444;
+}
+
+.instru {
+	/*background:#999;*/
+	width:480px;
+	top:130px;
+	left:230px;
+	/*padding-left:200px;*/
+	font-size:42px;
+	line-height:42px;
+	color:#6F2975;
+}
+
+/*.retro {
+	margin:-150px 0px 0px -315px;
+}*/
+.retro {
+	background:#FFF;
+	
+	z-index:1001;
+	
+	width:670px;
+	height:250px;
+	padding:20px;
+	
+	top:50%;
+	left:50%;
+	margin:-125px 0px 0px -350px;
+	
+	font-size:40px;
+	color:#444;
+}
+
+#respuestaOk {
+	display:none;
+	margin-top:10px;
+}
+
+.imgObjeto {
+	/*background-color:#FFF;*/
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+.marca {
+	background-position:top left;
+	background-repeat:no-repeat;
+	display:none;
+	position:absolute;
+	overflow:visible;
+	top:50%;
+	left:50%;
+	width:48px;
+	height:48px;
+	margin:-24px 0px 0px -24px;
+}
+.marcaOk {
+	background-image:url(../img/juegos/fas_01/j01/marcaOk.png);
+}
+.marcaNoOk {
+	background-image:url(../img/juegos/fas_01/j01/marcaNoOk.png);
+}
+
+.icoGrande {
+	background-color:#6F2975;
+	
+	width:94px;
+	height:94px;
+	margin:-77px 0px 0px 0px;
+}
+.icoGrande:hover {
+	background-color:#555;
+}
+
+#icoClose {
+	background-image:url(../img/ico_close_gde.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	float:right;
+	margin-right:-77px;
+}
+
+.icoInfoPeq {
+	background-image:url(../img/ico_i_peq.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	float:left;
+}
+.icoHomePeq {
+	background-image:url(../img/ico_main_peq.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	float:right;
+}
+
+.icoPeq {
+	background-color:#703403;
+	display:block;
+	
+	width:41px;
+	height:41px;
+	margin:7px 0px 0px 0px;
+	
+	z-index:1602;
+}
+.icoPeq:hover {
+	background-color:#85500F;
+}
+
+#btnAgain {
+	background:url(../img/ico_again.png) no-repeat 9px 15px #A2621A;
+	display:block;
+	float:none;
+	clear:both;
+	
+	width:230px;
+	padding:10px 15px 10px 45px;
+	margin:20px auto 10px auto;
+	
+	text-align:left;
+	font-size:30px;
+	color:#FFF;
+}
+#btnAgain:hover {
+	background-color:#85500F;
+}

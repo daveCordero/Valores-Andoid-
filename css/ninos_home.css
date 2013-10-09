@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-image:url(../img/bg.jpg);
+	background-position:center -700px;
+}
+
+#pantalla00 {
+	margin-top:0px;
+}
+
+#welcome {
+	background:#FFF;
+	
+	top:50%;
+	left:50%;
+	
+	width:670px;
+	height:200px;
+	padding:30px;
+	margin:-150px 0px 0px -350px;
+}
+
+#tituloApp {
+	/*background:#CCC;*/
+	border-bottom:#CCC solid 2px;
+	
+	width:460px;
+	top:40px;
+	left:230px;
+	
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 20px 0px;
+	
+	font-size:60px;
+	color:#444;
+}
+
+.instru {
+	/*background:#999;*/
+	width:480px;
+	top:130px;
+	left:230px;
+	/*padding-left:200px;*/
+	font-size:42px;
+	line-height:42px;
+	color:#6F2975;
+}
+
+.icoGrande {
+	background-color:#6F2975;
+	
+	width:94px;
+	height:94px;
+	margin:-77px 0px 0px 0px;
+}
+.icoGrande:hover {
+	background-color:#555;
+}
+
+#icoClose {
+	background-image:url(../img/ico_close_gde.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	float:right;
+	margin-right:-77px;
+}
+
+#instruSlide {
+	/*background-color:#999;*/
+	background-image:url(../img/instru_slide.png);
+	background-position:center 0px;
+	background-repeat:no-repeat;
+	
+	top:90px;
+	left:0px;
+	
+	width:230px;
+	height:92px;
+	z-index:1000;
+}
+
+/* activar si usa swiper
+#instru {
+	font-size:38px;
+	line-height:42px;
+}*/
+
+#btInfo { 
+	left:120px; 
+}
+
+#tituloValores {
+	/*background-color:#999;*/
+	background-position:center 0px;
+	background-repeat:no-repeat;
+	
+	width:526px;
+	/*height:115px;*/
+	height:30px;
+	
+	top:50px;
+	margin:0px 0px 0px -263px;
+	z-index:20;
+}
+
+#contNinosHome {
+	/*background:#CCC;*/
+	width: 960px;
+	height: 440px;
+	position:absolute;
+	top:80px;
+}
+
+.btNinos {
+	/*background:#FFF;*/
+	width: 320px;
+	height: 440px;
+}
+

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-image:url(../img/bg.jpg);/*grad radial amarillo-celeste*/
+}
+
+#general {
+	background:url(../img/fasciculo_05/bg.png) no-repeat center 0px;
+}
+
+#pajarito {
+	background:url(../img/fasciculo_05/pajarito.png) no-repeat 0px 0px;
+	
+	width:122px;
+	height:134px;
+	
+	top:38px;
+	left:240px;
+}
+

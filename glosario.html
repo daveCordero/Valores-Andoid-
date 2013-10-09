@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="author" content="David Herrera Cordero | Libros para Todos GN" />
+
+<script language="javascript" type="text/javascript">
+//vars user agent para meta viewport scale
+var isiPhone 	   = navigator.userAgent.toLowerCase().indexOf("iphone");
+var isiPad   	   = navigator.userAgent.toLowerCase().indexOf("ipad");
+var isiPod   	   = navigator.userAgent.toLowerCase().indexOf("ipod");
+var isSafari   	   = navigator.userAgent.toLowerCase().indexOf('safari');
+var android 	   = navigator.userAgent.toLowerCase().indexOf("android");
+//fin vars user agent para meta viewport scale
+</script>
+
+<!-- apple -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon" sizes="57×57"   href="img/touch-icon-iphone-114.png" />
+<link rel="apple-touch-icon" sizes="114×114" href="img/touch-icon-iphone-114.png" />
+<link rel="apple-touch-icon" sizes="72×72"   href="img/touch-icon-ipad-144.png" />
+<link rel="apple-touch-icon" sizes="144×144" href="img/touch-icon-ipad-144.png" />
+<!-- /apple -->
+
+<title>Valores | BAC | La Nación | Juegos</title>
+<link rel="shortcut icon" href="favicon.ico">
+
+
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/glosario.css" rel="stylesheet" type="text/css" />
+
+
+<script type="text/javascript" src="js/googleapis/jquery.min.js"></script>
+<script type="text/javascript" src='js/jquery.transit.min.js'></script>
+
+
+<!-- Swiper -->
+<link rel="stylesheet" href="css/idangerous.swiper.css">
+<link rel="stylesheet" href="css/swiper-glosario.css?v=1.8">
+<script type="text/javascript" src="js/swiper/idangerous.swiper-1.8.min.js"></script>
+<script type="text/javascript" src="js/swiper/idangerous.swiper.scrollbar-1.0.js"></script>
+<script type="text/javascript" src="js/swiper/swiper-glosario.js?v=1.8"></script>
+<!-- fin Swiper -->
+
+
+<script language="javascript" type="text/javascript">
+var audioElement = document.createElement('audio');
+audioElement.setAttribute('autoplay', 'autoplay');
+$.get();
+
+function aubtn() {
+	//iOS y Safari no reconocen .ogg
+	if(isiPhone > -1) {
+		//alert('iphone 22');
+		audioElement.setAttribute('src', 'audio/tap_ok.mp3');
+	}
+	else if(isiPod > -1) {
+		//alert('ipod');
+		audioElement.setAttribute('src', 'audio/tap_ok.mp3');
+	}
+	else if(isiPad > -1) {
+		//alert('ipad');
+		audioElement.setAttribute('src', 'audio/tap_ok.mp3');
+	}
+	else if(isSafari > -1) {
+		//alert('ipad');
+		audioElement.setAttribute('src', 'audio/tap_ok.mp3');
+	}
+	else if (android > -1) {
+		//alert('android 16');
+		audioElement.setAttribute('src', 'audio/tap_ok.ogg');
+	}
+	else {
+		audioElement.setAttribute('src', 'audio/tap_ok.ogg');
+	}
+	//fin iOS y Safari no reconocen .ogg
+	
+	audioElement.play();
+}
+
+$(window).load(function(){
+	$("#pre-load-web").fadeOut(1000,function(){
+		//eliminamos la capa de precarga
+	    $(this).remove();
+	    //permitimos scroll
+	    //$("body").css({"overflow-y":"auto"});
+	});
+});
+
+function nextPage(){
+	window.location.href = proxPantalla;
+}
+
+function flipPage(){
+	//var fasci = 1;
+	$('#contenido').transition({
+		perspective: '1000px',
+		rotateY: '180deg',
+		opacity: 0,
+	}, 500, 'out',function(){nextPage();});
+}
+
+function closeWelcome() {
+	//alert('pantallaActual: ' + proxPantalla);
+	$("#pantalla00").animate({ 'margin-top':650 }, 150, function(){ $(this).css({ display:'none' }); });
+	$("#pantalla01").animate({ 'margin-top':0 }, 150 );
+	$("#pantalla01").fadeIn(500);
+}//fin closeWelcome
+
+function goInfo() {
+	//alert('Pantalla Actual: ' + proxPantalla);
+	$("#pantalla01").animate({ 'margin-top':650 }, 150, function(){ $(this).css({ display:'none' }); });
+	$("#pantalla00").css({ display:'block' });
+	$("#pantalla00").animate({ 'margin-top':0 }, 300);
+}
+
+function nubesIn() {
+	var timerNube01in = setTimeout(function() {
+		//$('#nube01').css
+		$('#nube01').fadeIn();
+		nube01LR();
+		clearTimeout(timerNube01in);
+	}, 1600);
+	var timerNube02in = setTimeout(function() {
+		$('#nube02').fadeIn();
+		nube02RL();
+		clearTimeout(timerNube02in);
+	}, 1300);
+	var timerNube03in = setTimeout(function() {
+		$('#nube03').fadeIn();
+		nube03RL();
+		clearTimeout(timerNube03in);
+	}, 1000);
+}//fin nubesIn
+
+function nube01LR() {
+	var timerNube01LR = setTimeout(function() {
+		$('#nube01').animate({ 'left':800 }, 20000, function(){ $(this).fadeOut(500); });
+		clearTimeout(timerNube01LR);
+	}, 2000);
+}//fin nube01LR
+
+function nube02RL() {
+	var timerNube02RL = setTimeout(function() {
+		$('#nube02').animate({ 'left':60 }, 22000, function(){ $(this).fadeOut(500); });
+		clearTimeout(timerNube02RL);
+	}, 7000);
+}//fin nube02RL
+
+function nube03RL() {
+	var timerNube03RL = setTimeout(function() {
+		$('#nube03').animate({ 'left':30 }, 32000, function(){ $(this).fadeOut(500); });
+		clearTimeout(timerNube03RL);
+	}, 15000);
+	var timerNubesIn2 = setTimeout(function() {
+		$('#nube01').css({ 'left':'90px' });
+		$('#nube02').css({ 'left':'710px' });
+		$('#nube03').css({ 'left':'770px' });
+		clearTimeout(timerNubseIn2);
+	}, 50000);
+	var timerNubesIn3 = setTimeout(function() {
+		//alert('hola');
+		nubesIn();
+		clearTimeout(timerNubesIn3);
+	}, 51000);
+}//fin nube02RL
+
+
+// Listen for orientation changes
+window.addEventListener("orientationchange", function() {
+  //alert(window.orientation); //Announce the new orientation number
+  if (window.orientation == 0){
+	  $("#turnScreen").fadeIn(0);
+  }
+  /*chrome no funciona en esta orientacion
+  if (window.orientation == 180){
+	  $("#turnScreen").fadeIn(0);
+  }*/
+  if (window.orientation == 90){
+	  $("#turnScreen").fadeOut(0);
+  }
+  if (window.orientation == -90){
+	  $("#turnScreen").fadeOut(0);
+  }
+}, false);
+
+
+$(document).ready(function() {
+	
+	// precarga
+	//eliminamos el scroll de la pagina
+	$("body").css({"overflow-y":"hidden"});
+	//guardamos en una variable el alto del que tiene tu browser que no es lo mismo que del DOM
+	var alto=$(window).height();
+	//agregamos en el body un div que sera que ocupe toda la pantalla y se muestra encima de todo
+	$("body").append("<div id='pre-load-web'><div id='imagen-load'><img src='img/preload35.gif' /></div>");
+	//le damos el alto
+	$("#pre-load-web").css({height:alto+"px"});
+	//esta sera la capa que esta dento de la capa que muestra un gif
+	$("#imagen-load").css({"margin-top":(alto/2)-30+"px"});
+	// fin precarga
+
+	//define meta viewport scale
+	if(isiPhone > -1) {
+		//alert('iphone 22');
+		$("head").append('<meta name="viewport" content="user-scalable=yes, initial-scale=0.490, maximum-scale=0.490" />');
+		$("#instru").append('Deslice sus dedos hacia los lados para navegar por el contenido.');
+		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
+		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
+	}
+	else if(isiPod > -1) {
+		//alert('ipod');
+		$("head").append('<meta name="viewport" content="user-scalable=yes, initial-scale=0.490, maximum-scale=0.490" />');
+		$("#instru").append('Deslice sus dedos hacia los lados para navegar por el contenido.');
+		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
+		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
+	}
+	else if(isiPad > -1) {
+		//alert('ipod');
+		$("head").append('<meta name="viewport" content="height=600px, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />');
+		$("#instru").append('Deslice sus dedos hacia los lados para navegar por el contenido.');
+		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
+	}
+	else if (android > -1) {
+		//alert('android 16');
+		$("head").append('<meta name="viewport" content="width=1200px, target-densitydpi=device-dpi" />');
+		$("#instru").append('Deslice sus dedos hacia los lados para navegar por el contenido.');
+		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
+	}
+	else {
+		$("head").append('<meta name="viewport" content="height=600px, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />');
+		$("#instru").append('Arrastre el cursor hacia los lados para navegar por el contenido.');
+		$("#logosBlock").append('<a href="https://www.bac.net/bacsanjose/" target="_blank" class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></a> <a href="http://www.gruponacion.co.cr" target="_blank" class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></a>');
+		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
+	}
+	//fin define meta viewport scale
+	
+	//previene rebote iOS
+	document.body.addEventListener('touchmove', function(event) {
+	  event.preventDefault();
+	}, false);
+	//fin previene rebote iOS
+	
+	if (window.orientation == 0){
+		$("#turnScreen").fadeIn(0);
+	}
+	
+	/* modal dialogs */
+	//select all the a tag with name equal to modal
+	$('a[name=modal]').click(function(e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		
+		//Get the A tag
+		var id = $(this).attr('href');
+	
+		//Get the screen height and width
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
+	
+		//Set heigth and width to mask to fill up the whole screen
+		$('#mask').css({'width':maskWidth,'height':maskHeight});
+		
+		//transition effect		
+		$('#mask').fadeIn(300);	
+		$('#mask').fadeTo("slow",0.8);	
+	
+		//Get the window height and width
+		var winH = $(window).height();
+		var winW = $(window).width();
+              
+		//Set the popup window to center
+		$(id).css('top',  winH/2-$(id).height()/2);
+		$(id).css('left', winW/2-$(id).width()/2);
+	
+		//transition effect
+		$(id).fadeIn(300); 
+	
+	});
+	
+	//if close button is clicked
+	$('.window .close').click(function (e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		
+		$('#mask').hide();
+		$('.window').hide();
+	});		
+	
+	//if mask is clicked
+	$('#mask').click(function () {
+		$(this).hide();
+		$('.window').hide();
+	});			
+
+	$(window).resize(function () {
+	 
+ 		var box = $('#boxes .window');
+ 
+        //Get the screen height and width
+        var maskHeight = $(document).height();
+        var maskWidth = $(window).width();
+      
+        //Set height and width to mask to fill up the whole screen
+        $('#mask').css({'width':maskWidth,'height':maskHeight});
+               
+        //Get the window height and width
+        var winH = $(window).height();
+        var winW = $(window).width();
+
+        //Set the popup window to center
+        box.css('top',  winH/2 - box.height()/2);
+        box.css('left', winW/2 - box.width()/2);
+	 
+	});
+	/* fin modal dialogs */
+	
+	nubesIn();
+	
+	var varCuento = location.search.substr(1);
+	
+}); // fin document ready
+
+</script>
+
+
+</head>
+<body>
+
+
+<div id="contenido">
+	
+	<div id="general">
+		
+        <div id="pantalla01" class="disNone pantallas floatNoneClearBoth marginAuto">
+			
+			<div class="disNone posAbsolute" id="nube01"></div>
+			<div class="disNone posAbsolute" id="nube02"></div>
+            <div class="disNone posAbsolute" id="nube03"></div>
+			
+            <a class="disblock posAbsolute tran100 btnLista" id="btHome" href="javascript:var proxPantalla = 'index.html'" onClick="flipPage();"></a>
+            <a class="disblock posAbsolute tran100 btnLista" id="btInfo" href="javascript:void(0)" onClick="goInfo();"></a>
+            
+			<div class="disblock posAbsolute" id="titleGlosario"></div>
+            
+            <div class="swiper-container swiper-car">
+				<div class="pagination-car"></div>
+				<div class="swiper-wrapper" id="swipers">
+                	
+                    <img class='swiper-slide' src='img/glosario/s01.png'>
+                    <img class='swiper-slide' src='img/glosario/s02.png'>
+                    <img class='swiper-slide' src='img/glosario/s03.png'>
+                    <img class='swiper-slide' src='img/glosario/s04.png'>
+                    <img class='swiper-slide' src='img/glosario/s05.png'>
+                    <img class='swiper-slide' src='img/glosario/s06.png'>
+                    <img class='swiper-slide' src='img/glosario/s07.png'>
+                    <img class='swiper-slide' src='img/glosario/s08.png'>
+                    <img class='swiper-slide' src='img/glosario/s09.png'>
+                    <img class='swiper-slide' src='img/glosario/s10.png'>
+                    <img class='swiper-slide' src='img/glosario/s11.png'>
+                    <img class='swiper-slide' src='img/glosario/s12.png'>
+                    <img class='swiper-slide' src='img/glosario/s13.png'>
+                    <img class='swiper-slide' src='img/glosario/s14.png'>
+                    <img class='swiper-slide' src='img/glosario/s15.png'>
+                    <img class='swiper-slide' src='img/glosario/s16.png'>
+                    <img class='swiper-slide' src='img/glosario/s17.png'>
+					<img class='swiper-slide' src='img/glosario/s18.png'>
+                    
+				</div><!-- fin swiper-wrapper -->
+			</div><!-- fin swiper-container -->
+			
+            <div class="disblock posAbsolute top50" id="arrowsGlo"></div>
+			<div id="logosBlock" class="disblock posAbsolute">
+            	<!--<a href="https://www.bac.net/bacsanjose/" target="_blank" class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></a>
+                <a href="http://www.gruponacion.co.cr" target="_blank" class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></a>-->
+            </div><!--/#logosBlock-->
+			
+		</div><!--/#pantalla01-->
+		
+		<div id="pantalla00" class="disblock pantallas floatNoneClearBoth marginAuto">
+			<div id="welcome" class="disblock posAbsolute borRadius20">
+				
+				<a id="icoClose" class="icoGrande borRadius50Por" onclick="closeWelcome();" href="javascript:void(0)"></a>
+				
+				<div class="disblock posAbsolute" id="instruSlide"></div>
+                <div id="tituloApp" class="disblock posAbsolute">Instrucción</div>
+				<div id="instru" class="disblock posAbsolute instru"></div><!--/#instru-->
+				
+			</div><!--/fin welcome-->
+		</div><!--/fin pantalla00-->
+		
+	</div><!--/fin general-->
+	
+	
+
+</div><!-- fin contenido -->
+
+<div id="turnScreen"></div>
+
+<script language="Javascript">
+	document.oncontextmenu = function(){return false};
+	document.onselectstart = function(){return false};
+	//document.onkeydown = function(){return false};
+</script>
+
+</body>
+</html>

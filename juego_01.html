@@ -1,0 +1,505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="author" content="David Herrera Cordero | Libros para Todos GN" />
+
+<script language="javascript" type="text/javascript">
+//vars user agent para meta viewport scale
+var isiPhone 	   = navigator.userAgent.toLowerCase().indexOf("iphone");
+var isiPad   	   = navigator.userAgent.toLowerCase().indexOf("ipad");
+var isiPod   	   = navigator.userAgent.toLowerCase().indexOf("ipod");
+var isSafari   	   = navigator.userAgent.toLowerCase().indexOf('safari');
+var android 	   = navigator.userAgent.toLowerCase().indexOf("android");
+//fin vars user agent para meta viewport scale
+</script>
+
+<!-- apple -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="apple-touch-icon" sizes="57×57" 		href="img/touch-icon-iphone-114.png" />
+<link rel="apple-touch-icon" sizes="114×114" 	href="img/touch-icon-iphone-114.png" />
+<link rel="apple-touch-icon" sizes="72×72" 		href="img/touch-icon-ipad-144.png" />
+<link rel="apple-touch-icon" sizes="144×144" 	href="img/touch-icon-ipad-144.png" />
+<!-- /apple -->
+
+<title>Valores | BAC | La Nación | Juego: Mi Alcancía</title>
+<link rel="shortcut icon" href="favicon.ico">
+
+
+<link href="css/global.css" rel="stylesheet" type="text/css" />
+<link href="css/juegos.css" rel="stylesheet" type="text/css" />
+
+
+<script type="text/javascript" src="js/googleapis/jquery.min.js"></script>
+<script type="text/javascript" src='js/jquery.transit.min.js'></script>
+<script type="text/javascript" src="js/jQueryRotate.js"></script>
+
+
+<script language="javascript" type="text/javascript">
+var score = 0;
+var meta = '';
+
+var audioElement = document.createElement('audio');
+audioElement.setAttribute('autoplay', 'autoplay');
+$.get();
+
+function auWin() {
+	//iOS y Safari no reconocen .ogg
+	if(isiPhone > -1) {
+		//alert('iphone 22');
+		audioElement.setAttribute('src', 'audio/win.mp3');
+	}
+	else if(isiPod > -1) {
+		//alert('ipod');
+		audioElement.setAttribute('src', 'audio/win.mp3');
+	}
+	else if(isiPad > -1) {
+		//alert('ipad');
+		audioElement.setAttribute('src', 'audio/win.mp3');
+	}
+	else if(isSafari > -1) {
+		//alert('ipad');
+		audioElement.setAttribute('src', 'audio/win.mp3');
+	}
+	else if (android > -1) {
+		//alert('android 16');
+		audioElement.setAttribute('src', 'audio/win.ogg');
+	}
+	else {
+		audioElement.setAttribute('src', 'audio/win.ogg');
+	}
+	//fin iOS y Safari no reconocen .ogg
+	
+	audioElement.play();
+}
+
+function aubtn() {
+	
+	//iOS y Safari no reconocen .ogg
+	if(isiPhone > -1) {
+		//alert('iphone 22');
+		audioElement.setAttribute('src', 'audio/tap_ok.mp3');
+	}
+	else if(isiPod > -1) {
+		//alert('ipod');
+		audioElement.setAttribute('src', 'audio/tap_ok.mp3');
+	}
+	else if(isiPad > -1) {
+		//alert('ipad');
+		audioElement.setAttribute('src', 'audio/tap_ok.mp3');
+	}
+	else if(isSafari > -1) {
+		//alert('ipad');
+		audioElement.setAttribute('src', 'audio/tap_ok.mp3');
+	}
+	else if (android > -1) {
+		//alert('android 16');
+		audioElement.setAttribute('src', 'audio/tap_ok.ogg');
+	}
+	else {
+		audioElement.setAttribute('src', 'audio/tap_ok.ogg');
+	}
+	//fin iOS y Safari no reconocen .ogg
+	
+	audioElement.play();
+}
+
+function aubtnNo(){
+	
+	//iOS y Safari no reconocen .ogg
+	if(isiPhone > -1) {
+		//alert('iphone 22');
+		audioElement.setAttribute('src', 'audio/tap_noOk.mp3');
+	}
+	else if(isiPod > -1) {
+		//alert('ipod');
+		audioElement.setAttribute('src', 'audio/tap_noOk.mp3');
+	}
+	else if(isiPad > -1) {
+		//alert('ipad');
+		audioElement.setAttribute('src', 'audio/tap_noOk.mp3');
+	}
+	else if(isSafari > -1) {
+		//alert('ipad');
+		audioElement.setAttribute('src', 'audio/tap_noOk.mp3');
+	}
+	else if (android > -1) {
+		//alert('android 16');
+		audioElement.setAttribute('src', 'audio/tap_noOk.ogg');
+	}
+	else {
+		audioElement.setAttribute('src', 'audio/tap_noOk.ogg');
+	}
+	//fin iOS y Safari no reconocen .ogg
+	
+	audioElement.play();
+}
+
+$(window).load(function(){
+	$("#pre-load-web").fadeOut(1000,function(){
+		//eliminamos la capa de precarga
+	    $(this).remove();
+	    //permitimos scroll
+	    //$("body").css({"overflow-y":"auto"});
+	});
+});
+
+function nextPage(){
+	window.location.href = proxPantalla;
+}
+
+function flipPage(){
+	$('#contenido').transition({
+		perspective: '1000px',
+		rotateY: '180deg',
+		opacity: 0,
+	}, 500, 'out',function(){nextPage();});
+}
+
+function closeWelcome() {
+	//alert('pantallaActual: ' + proxPantalla);
+	$("#pantalla00").animate({ 'margin-top':650 }, 150, function(){ $(this).css({ display:'none' }); });
+	pant01();
+	$(pantallaActual).animate({ 'margin-top':0 }, 150 );
+	$(pantallaActual).fadeIn(500);
+}//fin closeWelcome
+
+function goInfo() {
+	//alert('Pantalla Actual: ' + proxPantalla);
+	$(pantallaActual).animate({ 'margin-top':650 }, 150, function(){ $(this).css({ display:'none' }); });
+	$("#pantalla00").css({ display:'block' });
+	$("#pantalla00").animate({ 'margin-top':0 }, 300);
+}
+
+function tapOk(clicked_id) {
+	var removerId = "#" + clicked_id; //alert('Remover Id: ' + removerId);
+	$(removerId).attr("onclick", "javascript:void(0);");
+	score++; //alert('Score: ' + score);
+	if(score == meta){
+		var timerHidePant = setTimeout(function() {
+			$("#pantalla01").fadeOut(100);
+			auWin();
+			clearTimeout(timerHidePant);
+		}, 1000);
+		var timerOk = setTimeout(function() {
+			$("#respuestaOk").fadeIn(300);
+			clearTimeout(timerOk);
+		}, 1500);
+	}
+	aubtn();
+	var newIdOk = "#" + clicked_id + ' .marcaOk';
+	$(newIdOk).fadeIn(100);
+}//fin tapOk
+function tapNoOk(clicked_id) {
+	//alert('Clicked Id: ' + clicked_id);
+	aubtnNo();
+	var newIdNoOk = "#" + clicked_id + ' .marcaNoOk';
+	$(newIdNoOk).fadeIn(100);
+	var timerNoOk = setTimeout(function() {
+		$(newIdNoOk).fadeOut(100);
+		clearTimeout(timerNoOk);
+	}, 800);
+}//fin tapNoOk
+
+function elementosEnter(){
+	if(score == 0) {
+		var timerElementosE = setTimeout(function() {
+			$('.imgObjeto').fadeIn(500);
+			$('.marca').hide();
+			clearTimeout(timerElementosE);
+		}, 500);
+	}
+}//animalesEntrada
+
+function pant01() {
+	//meta = 3;
+	elementosEnter();
+}
+
+
+var fasciculo = location.search.substr(1);//alert(fasciculo);
+/* carga elementos según var fasciculo */
+switch(fasciculo) {
+
+	case '01'://principe feliz
+		$('head').append('<link href="css/juego_01_pri.css" rel="stylesheet" type="text/css" />');
+	break;
+	
+	case '02'://la bella y la bestia
+		$('head').append('<link href="css/juego_01_bestia.css" rel="stylesheet" type="text/css" />');
+	break;
+	
+	case '03'://pulgarcito
+		$('head').append('<link href="css/juego_01_pulgar.css" rel="stylesheet" type="text/css" />');
+	break;
+	
+	case '04'://el abuelo y el nieto
+		$('head').append('<link href="css/juego_01_abuelo.css" rel="stylesheet" type="text/css" />');
+		break;
+	
+	case '05'://el gigante egoista
+		$('head').append('<link href="css/juego_01_gigante.css" rel="stylesheet" type="text/css" />');
+	break;
+	
+	case '06'://la flor mas bonita
+		$('head').append('<link href="css/juego_01_flor.css" rel="stylesheet" type="text/css" />');
+	break;
+	
+}//fin switch
+
+
+// Listen for orientation changes
+window.addEventListener("orientationchange", function() {
+  //alert(window.orientation); //Announce the new orientation number
+  if (window.orientation == 0){
+	  $("#turnScreen").fadeIn(0);
+  }
+  /*chrome no funciona en esta orientacion
+  if (window.orientation == 180){
+	  $("#turnScreen").fadeIn(0);
+  }*/
+  if (window.orientation == 90){
+	  $("#turnScreen").fadeOut(0);
+  }
+  if (window.orientation == -90){
+	  $("#turnScreen").fadeOut(0);
+  }
+}, false);
+
+
+$(document).ready(function() {
+	
+
+	// precarga
+	//eliminamos el scroll de la pagina
+	$("body").css({"overflow-y":"hidden"});
+	//guardamos en una variable el alto del que tiene tu browser que no es lo mismo que del DOM
+	var alto=$(window).height();
+	//agregamos en el body un div que sera que ocupe toda la pantalla y se muestra encima de todo
+	$("body").append("<div id='pre-load-web'><div id='imagen-load'><img src='img/preload35.gif' /></div>");
+	//le damos el alto
+	$("#pre-load-web").css({height:alto+"px"});
+	//esta sera la capa que esta dento de la capa que muestra un gif
+	$("#imagen-load").css({"margin-top":(alto/2)-30+"px"});
+	// fin precarga
+	
+	//define meta viewport scale
+	if(isiPhone > -1) {
+		//alert('iphone 22');
+		$("head").append('<meta name="viewport" content="user-scalable=yes, initial-scale=0.490, maximum-scale=0.490" />');
+		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
+		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
+	}
+	else if(isiPod > -1) {
+		//alert('ipod');
+		$("head").append('<meta name="viewport" content="user-scalable=yes, initial-scale=0.490, maximum-scale=0.490" />');
+		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
+		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
+	}
+	else if (android > -1) {
+		//alert('android 16');
+		$("head").append('<meta name="viewport" content="width=1200px, target-densitydpi=device-dpi" />');
+		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
+	}
+	else {
+		$("head").append('<meta name="viewport" content="height=600px, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />');
+		$("#logosBlock").append('<a href="https://www.bac.net/bacsanjose/" target="_blank" class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></a> <a href="http://www.gruponacion.co.cr" target="_blank" class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></a>');
+		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
+	}
+	//fin define meta viewport scale
+	
+	
+	//previene rebote iOS
+	document.body.addEventListener('touchmove', function(event) {
+	  event.preventDefault();
+	}, false);
+	//fin previene rebote iOS
+	
+	if (window.orientation == 0){
+		$("#turnScreen").fadeIn(0);
+	}
+	
+	/* modal dialogs */
+	//select all the a tag with name equal to modal
+	$('a[name=modal]').click(function(e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		
+		//Get the A tag
+		var id = $(this).attr('href');
+	
+		//Get the screen height and width
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
+	
+		//Set heigth and width to mask to fill up the whole screen
+		$('#mask').css({'width':maskWidth,'height':maskHeight});
+		
+		//transition effect		
+		$('#mask').fadeIn(300);	
+		$('#mask').fadeTo("slow",0.8);	
+	
+		//Get the window height and width
+		var winH = $(window).height();
+		var winW = $(window).width();
+              
+		//Set the popup window to center
+		$(id).css('top',  winH/2-$(id).height()/2);
+		$(id).css('left', winW/2-$(id).width()/2);
+	
+		//transition effect
+		$(id).fadeIn(300); 
+	
+	});
+	
+	//if close button is clicked
+	$('.window .close').click(function (e) {
+		//Cancel the link behavior
+		e.preventDefault();
+		
+		$('#mask').hide();
+		$('.window').hide();
+	});		
+	
+	//if mask is clicked
+	$('#mask').click(function () {
+		$(this).hide();
+		$('.window').hide();
+	});			
+
+	$(window).resize(function () {
+	 
+ 		var box = $('#boxes .window');
+ 
+        //Get the screen height and width
+        var maskHeight = $(document).height();
+        var maskWidth = $(window).width();
+      
+        //Set height and width to mask to fill up the whole screen
+        $('#mask').css({'width':maskWidth,'height':maskHeight});
+               
+        //Get the window height and width
+        var winH = $(window).height();
+        var winW = $(window).width();
+
+        //Set the popup window to center
+        box.css('top',  winH/2 - box.height()/2);
+        box.css('left', winW/2 - box.width()/2);
+	 
+	});
+	/* fin modal dialogs */
+	
+	pantallaActual = '#pantalla01';
+	
+	/* carga elementos según var fasciculo */
+	switch(fasciculo) {
+	
+		case '01'://principe feliz
+			$('#instru').append('Selecciono las imágenes donde puedo ayudar a las personas.');
+			$('#pantalla01').append('<a id="imgA" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapNoOk(this.id)"><div class="marca marcaNoOk"></div></a> <a id="imgB" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a> <a id="imgC" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapNoOk(this.id)"><div class="marca marcaNoOk"></div></a> <a id="imgD" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a> <a id="imgE" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a>');
+			meta = 3;
+		break;
+		
+		case '02'://la bella y la bestia
+			$('#instru').append('Selecciono las imágenes de tres situaciones que presenten el valor de la amabilidad.');
+                  $('#pantalla01').append('<a id="imgA" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a> <a id="imgB" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapNoOk(this.id)"><div class="marca marcaNoOk"></div></a> <a id="imgC" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a> <a id="imgD" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapNoOk(this.id)"><div class="marca marcaNoOk"></div></a> <a id="imgE" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a>');
+			meta = 3;
+		break;
+		
+		case '03'://pulgarcito
+			$('#instru').append('Selecciono las imágenes que ilustran actitudes que permiten pertenecer a un grupo.');
+                  $('#pantalla01').append('<a id="imgA" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapNoOk(this.id)"><div class="marca marcaNoOk"></div></a> <a id="imgB" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a> <a id="imgC" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapNoOk(this.id)"><div class="marca marcaNoOk"></div></a> <a id="imgD" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a> <a id="imgE" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a>');
+			meta = 3;
+		break;
+		
+		case '04'://el abuelo y el nieto
+			$('#instru').append('Selecciono las imágenes de actividades que puedo compartir con los adultos mayores de la familia.');
+                  $('#pantalla01').append('<a id="imgA" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapNoOk(this.id)"><div class="marca marcaNoOk"></div></a> <a id="imgB" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a> <a id="imgC" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a> <a id="imgD" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a> <a id="imgE" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapNoOk(this.id)"><div class="marca marcaNoOk"></div></a>');
+			meta = 3;
+			break;
+		
+		case '05'://el gigante egoista
+			$('#instru').append('Selecciono las imágenes de acciones que ayudan a cuidar la naturaleza.');
+                  $('#pantalla01').append('<a id="imgA" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapNoOk(this.id)"><div class="marca marcaNoOk"></div></a> <a id="imgB" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a> <a id="imgC" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a> <a id="imgD" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapNoOk(this.id)"><div class="marca marcaNoOk"></div></a> <a id="imgE" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a>');
+			meta = 3;
+		break;
+		
+		case '06'://la flor mas bonita
+			$('#instru').append('Selecciono las imágenes de actividades en las que es necesario ser disciplinado para mejorar.');
+                  $('#pantalla01').append('<a id="imgA" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapNoOk(this.id)"><div class="marca marcaNoOk"></div></a> <a id="imgB" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a> <a id="imgC" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a> <a id="imgD" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapNoOk(this.id)"><div class="marca marcaNoOk"></div></a> <a id="imgE" class="imgObjeto disNone posAbsolute borRadius15 alpha80hover imgJuego1" href="javascript:void(0)" onclick="tapOk(this.id)"><div class="marca marcaOk"></div></a>');
+			meta = 3;
+		break;
+		
+	}//fin switch
+    
+    /*rendereado x js para obtener var fasciculo */
+    $('#pantalla01').append('<a class="disblock posAbsolute tran100 btnLista" id="btAtras" href="juegos.html?' + fasciculo + '" onClick="flipPage();"></a>');
+    $('#retro').append('<a class="icoGrande borRadius50Por" id="icoClose" href="juegos.html?' + fasciculo + '" onClick="flipPage();"></a>');
+	
+}); // fin document ready
+
+</script>
+
+
+</head>
+<body>
+
+
+<div id="contenido">
+	
+	<div id="general">
+    	
+        <div id="respuestaOk" class="disNone pantallas floatNoneClearBoth marginAuto">
+        	<div class="retro disblock posAbsolute borRadius20" id="retro">
+                
+                <div class="disblock posAbsolute btjuego" id="btjuego1"></div>
+                <div id="tituloApp" class="disblock posAbsolute">¡Muy bien!</div>
+				<div id="mensaje" class="disblock posAbsolute instru">Seleccionó las imágenes de forma correcta.</div>
+                
+			</div><!--/retro-->
+		</div><!--/respuestaOk-->
+		
+		<div id="pantalla01" class="disNone pantallas floatNoneClearBoth marginAuto">
+			
+            <a class="disblock posAbsolute tran100 btnLista" id="btHome" href="javascript:var proxPantalla = 'index.html'" onClick="flipPage();"></a>
+            <a class="disblock posAbsolute tran100 btnLista" id="btInfo" href="javascript:void(0)" onClick="goInfo();"></a>
+            
+			<div class="disblock posAbsolute" id="titleJuegos"></div>
+            
+			<div id="logosBlock" class="disblock posAbsolute">
+            	<!--<a href="https://www.bac.net/bacsanjose/" target="_blank" class="disblock floatL alpha80hover tran100 patrocinador" id="logoBac"></a>
+                <a href="http://www.gruponacion.co.cr" target="_blank" class="disblock floatR alpha80hover tran100 patrocinador" id="logoNacion"></a>-->
+            </div><!--/#logosBlock-->
+			
+        </div><!-- fin pantalla01 -->
+        
+        <div id="pantalla00" class="disblock pantallas floatNoneClearBoth marginAuto">
+			<div id="welcome" class="disblock posAbsolute borRadius20">
+				
+				<a id="icoClose" class="icoGrande borRadius50Por" onclick="closeWelcome();" href="javascript:void(0)"></a>
+				
+				<div class="disblock posAbsolute btjuego" id="btjuego1"></div>
+                <div id="tituloApp" class="disblock posAbsolute">Mi alcancía</div>
+				<div id="instru" class="disblock posAbsolute instru"></div><!--/#instru-->
+				
+			</div><!--/fin welcome-->
+		</div><!--/fin pantalla00-->
+		
+	</div><!--/fin general-->
+	
+	
+
+</div><!-- fin contenido -->
+
+<div id="turnScreen"></div>
+
+<script language="Javascript">
+	document.oncontextmenu = function(){return false};
+	document.onselectstart = function(){return false};
+	//document.onkeydown = function(){return false};
+</script>
+
+</body>
+</html>
