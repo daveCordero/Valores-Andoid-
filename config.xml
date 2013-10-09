@@ -8,9 +8,6 @@
 <name>Valores</name>
 
 <gap:platform name="android" />
-<gap:platform name="webos" />
-<gap:platform name="symbian" />
-<gap:platform name="winphone" />
 
 <icon src="phoneGap/Icon@2x.png" gap:platform="android" gap:density="ldpi" />
 <gap:splash src="phoneGap/LDPI_landscape.png"  gap:platform="android" gap:density="ldpi" />

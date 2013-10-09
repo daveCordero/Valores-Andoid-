@@ -49,8 +49,8 @@ var score = 0;
 var meta = '';
 
 var audioElement = document.createElement('audio');
-audioElement.setAttribute('autoplay', 'autoplay');
-$.get();
+/*audioElement.setAttribute('autoplay', 'autoplay');
+$.get();*/
 
 function auWin() {
 	//iOS y Safari no reconocen .ogg
@@ -78,6 +78,9 @@ function auWin() {
 		audioElement.setAttribute('src', 'audio/win.mp3');
 	}
 	//fin iOS y Safari no reconocen .ogg
+	
+	audioElement.setAttribute('autoplay', 'autoplay');
+	$.get();
 	
 	audioElement.play();
 }
@@ -111,6 +114,8 @@ function aubtn() {
 	}
 	//fin iOS y Safari no reconocen .ogg
 	
+	audioElement.setAttribute('autoplay', 'autoplay');
+	$.get();
 	audioElement.play();
 }
 
@@ -142,6 +147,9 @@ function aubtnNo(){
 		audioElement.setAttribute('src', 'audio/tap_noOk.ogg');
 	}
 	//fin iOS y Safari no reconocen .ogg
+	
+	audioElement.setAttribute('autoplay', 'autoplay');
+	$.get();
 	
 	audioElement.play();
 }
