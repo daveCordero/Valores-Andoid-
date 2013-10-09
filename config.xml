@@ -19,7 +19,7 @@
 <gap:splash src="phoneGap/XHDPI_landscape.png" gap:platform="android" gap:density="xhdpi" />
 
 <description>
-Juguemos con las Nociones Matemáticas es una aplicación para aprender conceptos de tamaño, posición, longitud, anchura, distancia, cantidad y relaciones unívocas. Todo a través de amigables juegos y divertidos escenarios. Una iniciativa de Libros para Todos de Grupo Nación.
+Una iniciativa de BAC y Grupo Nación para el rescate de valores en la sociedad costarricense. Desarrollado por el departamento de Libros para Todos de Grupo Nación.
 </description>
 
 <preference name="permissions" value="none" />
