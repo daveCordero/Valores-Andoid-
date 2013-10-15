@@ -56,9 +56,9 @@ var isDeskIE       = navigator.userAgent.toLowerCase().indexOf("IE");*/
 
 <script language="javascript" type="text/javascript">
 
-var audioElement = document.createElement('audio');
+/*var audioElement = document.createElement('audio');
 audioElement.setAttribute('autoplay', 'autoplay');
-$.get();
+$.get();*/
 
 
 function auIntro() {
@@ -338,6 +338,9 @@ $(document).ready(function() {
 	nubesIn();
 	//auIntro();
 	
+	var audioElement = document.createElement('audio');
+	audioElement.setAttribute('autoplay', 'autoplay');
+	$.get();
 	audioElement.setAttribute('src', 'audio/intro.ogg');
 	audioElement.play();
 	
