@@ -42,10 +42,13 @@ var score = 0;
 var meta = '';
 
 var audioElement = document.createElement('audio');
-audioElement.setAttribute('autoplay', 'autoplay');
-$.get();
+/*audioElement.setAttribute('autoplay', 'autoplay');
+$.get();*/
 
 function auWin() {
+	audioElement.setAttribute('autoplay', 'autoplay');
+	$.get();
+	
 	//iOS y Safari no reconocen .ogg
 	if(isiPhone > -1) {
 		//alert('iphone 22');
@@ -76,6 +79,8 @@ function auWin() {
 }
 
 function aubtn() {
+	audioElement.setAttribute('autoplay', 'autoplay');
+	$.get();
 	
 	//iOS y Safari no reconocen .ogg
 	if(isiPhone > -1) {
@@ -107,6 +112,8 @@ function aubtn() {
 }
 
 function aubtnNo(){
+	audioElement.setAttribute('autoplay', 'autoplay');
+	$.get();
 	
 	//iOS y Safari no reconocen .ogg
 	if(isiPhone > -1) {
