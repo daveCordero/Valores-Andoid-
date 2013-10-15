@@ -281,23 +281,23 @@ $(document).ready(function() {
 	if(isiPhone > -1) {
 		//alert('iphone 22');
 		$("head").append('<meta name="viewport" content="user-scalable=yes, initial-scale=0.490, maximum-scale=0.490" />');
-		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
+		$(".logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
 		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
 	}
 	else if(isiPod > -1) {
 		//alert('ipod');
 		$("head").append('<meta name="viewport" content="user-scalable=yes, initial-scale=0.490, maximum-scale=0.490" />');
-		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
+		$(".logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
 		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
 	}
 	else if (android > -1) {
 		//alert('android 16');
 		$("head").append('<meta name="viewport" content="width=1200px, target-densitydpi=device-dpi" />');
-		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
+		$(".logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
 	}
 	else {
 		$("head").append('<meta name="viewport" content="height=600px, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />');
-		$("#logosBlock").append('<a href="https://www.bac.net/bacsanjose/" target="_blank" class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></a> <a href="http://www.gruponacion.co.cr" target="_blank" class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></a>');
+		$(".logosBlock").append('<a href="https://www.bac.net/bacsanjose/" target="_blank" class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></a> <a href="http://www.gruponacion.co.cr" target="_blank" class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></a>');
 		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
 	}
 	//fin define meta viewport scale
@@ -445,10 +445,7 @@ $(document).ready(function() {
                 </tr>
             </table><!--/table3-->
             
-            <div id="logosBlock" class="disblock posAbsolute">
-            	<a href="https://www.bac.net/bacsanjose/" target="_blank" class="disblock floatL alpha80hover tran100 patrocinador" id="logoBac"></a>
-                <a href="http://www.gruponacion.co.cr" target="_blank" class="disblock floatR alpha80hover tran100 patrocinador" id="logoNacion"></a>
-            </div><!--/#logosBlock-->
+            <div id="logosBlock" class="disblock posAbsolute logosBlock"></div><!--/#logosBlock-->
             
         </div><!-- fin pantalla03 -->
         
@@ -485,10 +482,7 @@ $(document).ready(function() {
                 </tr>
             </table><!--/table2-->
             
-            <div id="logosBlock" class="disblock posAbsolute">
-            	<a href="https://www.bac.net/bacsanjose/" target="_blank" class="disblock floatL alpha80hover tran100 patrocinador" id="logoBac"></a>
-                <a href="http://www.gruponacion.co.cr" target="_blank" class="disblock floatR alpha80hover tran100 patrocinador" id="logoNacion"></a>
-            </div><!--/#logosBlock-->
+            <div id="logosBlock" class="disblock posAbsolute logosBlock"></div><!--/#logosBlock-->
             
         </div><!-- fin pantalla02 -->
         
@@ -525,10 +519,7 @@ $(document).ready(function() {
                 </tr>
 			</table><!--/table1-->
             
-			<div id="logosBlock" class="disblock posAbsolute">
-            	<!--<a href="https://www.bac.net/bacsanjose/" target="_blank" class="disblock floatL alpha80hover tran100 patrocinador" id="logoBac"></a>
-                <a href="http://www.gruponacion.co.cr" target="_blank" class="disblock floatR alpha80hover tran100 patrocinador" id="logoNacion"></a>-->
-            </div><!--/#logosBlock-->
+			<div id="logosBlock" class="disblock posAbsolute logosBlock"></div><!--/#logosBlock-->
 			
         </div><!-- fin pantalla01 -->
         

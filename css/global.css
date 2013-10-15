@@ -481,10 +481,12 @@ a {
 	z-index:1009;
 }
 .patrocinador {
+	/*background-color:#333;*/
 	background-position:0px 0px;
 	background-repeat:no-repeat;
 }
 #logoBac {
+	/*background-color:#666;*/
 	background-image:url(../img/logo_bac.png);
 	
 	top:28px;
@@ -495,6 +497,7 @@ a {
 	/*margin:28px 0px 0px 32px;*/
 }
 #logoNacion {
+	/*background-color:#666;*/
 	background-image:url(../img/logo_nacion.png);
 	
 	top:41px;

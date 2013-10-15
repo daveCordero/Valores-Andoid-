@@ -12,13 +12,6 @@ var isiPad   	   = navigator.userAgent.toLowerCase().indexOf("ipad");
 var isiPod   	   = navigator.userAgent.toLowerCase().indexOf("ipod");
 var isSafari   	   = navigator.userAgent.toLowerCase().indexOf('safari');
 var android 	   = navigator.userAgent.toLowerCase().indexOf("android");
-
-//var nua = navigator.userAgent;
-//var  = ((nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1) && !(nua.indexOf('Chrome') > -1));
-
-var ua = navigator.userAgent.toLowerCase();
-var is_android = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-
 //fin vars user agent para meta viewport scale
 </script>
 
@@ -48,15 +41,11 @@ var is_android = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
 var score = 0;
 var meta = '';
 
-/*var audioElement = document.createElement('audio');
+var audioElement = document.createElement('audio');
 audioElement.setAttribute('autoplay', 'autoplay');
-$.get();*/
+$.get();
 
 function auWin() {
-	var audioElement = document.createElement('audio');
-	/*audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();*/
-	
 	//iOS y Safari no reconocen .ogg
 	if(isiPhone > -1) {
 		//alert('iphone 22');
@@ -74,28 +63,19 @@ function auWin() {
 		//alert('ipad');
 		audioElement.setAttribute('src', 'audio/win.mp3');
 	}
-	else if (is_android) {
+	else if (android > -1) {
 		//alert('android 16');
-		audioElement.setAttribute('src', 'audio/win.mp3');
+		audioElement.setAttribute('src', 'audio/win.ogg');
 	}
 	else {
-		audioElement.setAttribute('src', 'audio/win.mp3');
+		audioElement.setAttribute('src', 'audio/win.ogg');
 	}
 	//fin iOS y Safari no reconocen .ogg
 	
-	/*audioElement.play();*/
-	audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();
-	audioElement.addEventListener("load", function() {
-		audioElement.play();
-	}, true);
 	audioElement.play();
 }
 
 function aubtn() {
-	var audioElement = document.createElement('audio');
-	audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();
 	
 	//iOS y Safari no reconocen .ogg
 	if(isiPhone > -1) {
@@ -114,32 +94,19 @@ function aubtn() {
 		//alert('ipad');
 		audioElement.setAttribute('src', 'audio/tap_ok.mp3');
 	}
-	//else if (android > -1) {
-	else if (is_android) {
+	else if (android > -1) {
 		//alert('android 16');
-		audioElement.setAttribute('src', 'audio/tap_ok.mp3');
+		audioElement.setAttribute('src', 'audio/tap_ok.ogg');
 	}
 	else {
 		audioElement.setAttribute('src', 'audio/tap_ok.ogg');
 	}
 	//fin iOS y Safari no reconocen .ogg
 	
-	/*audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();
-	audioElement.play();*/
-	
-	audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();
-	audioElement.addEventListener("load", function() {
-		audioElement.play();
-	}, true);
 	audioElement.play();
 }
 
 function aubtnNo(){
-	var audioElement = document.createElement('audio');
-	audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();
 	
 	//iOS y Safari no reconocen .ogg
 	if(isiPhone > -1) {
@@ -158,25 +125,15 @@ function aubtnNo(){
 		//alert('ipad');
 		audioElement.setAttribute('src', 'audio/tap_noOk.mp3');
 	}
-	//else if (android > -1) {
-	else if (is_android) {
+	else if (android > -1) {
 		//alert('android 16');
-		audioElement.setAttribute('src', 'audio/tap_noOk.mp3');
+		audioElement.setAttribute('src', 'audio/tap_noOk.ogg');
 	}
 	else {
 		audioElement.setAttribute('src', 'audio/tap_noOk.ogg');
 	}
 	//fin iOS y Safari no reconocen .ogg
 	
-	/*audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();
-	audioElement.play();*/
-	
-	audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();
-	audioElement.addEventListener("load", function() {
-		audioElement.play();
-	}, true);
 	audioElement.play();
 }
 
@@ -338,6 +295,12 @@ $(document).ready(function() {
 	else if(isiPod > -1) {
 		//alert('ipod');
 		$("head").append('<meta name="viewport" content="user-scalable=yes, initial-scale=0.490, maximum-scale=0.490" />');
+		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
+		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
+	}
+	else if(isiPad > -1) {
+		//alert('ipod');
+		$("head").append('<meta name="viewport" content="height=600px, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />');
 		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
 		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
 	}
