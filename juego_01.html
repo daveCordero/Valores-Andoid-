@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
-<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">-->
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -342,14 +342,14 @@ $(document).ready(function() {
 		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
 	}
 	else if (android > -1) {
-		alert('android 18');
+		alert('android 19');
 		//$("head").append('<meta name="viewport" content="width=1200px, target-densitydpi=device-dpi" />');//sale de pantalla Samsung Pamela
 		//$("head").append('<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi" />');
 		//$("head").append('<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">');
 		//$("head").append('<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no">');
 		//$("head").append('<meta name="viewport" content="height=device-height, target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no">');
 		//$("head").append('<meta name="viewport" content="height=device-height, target-densitydpi=device-dpi, user-scalable=no">');
-		$("head").append('<meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no">');
+		$("head").append('<meta name="viewport" content="target-densitydpi=device-dpi, user-scalable=no">');
 		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
 	}
 	else {
