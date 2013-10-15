@@ -6,8 +6,8 @@
 
 <head>
 
-<!--<meta name="viewport" content="width=1400px, target-densitydpi=device-dpi">-->
-<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, user-scalable=no" />
+<!--<meta name="viewport" content="width=1400px, target-densitydpi=device-dpi">
+<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, user-scalable=no" />-->
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="author" content="David Herrera Cordero | Libros para Todos GN" />
@@ -55,6 +55,11 @@ var isDeskIE       = navigator.userAgent.toLowerCase().indexOf("IE");*/
 
 
 <script language="javascript" type="text/javascript">
+
+var audioElement = document.createElement('audio');
+audioElement.setAttribute('autoplay', 'autoplay');
+$.get();
+
 
 function auIntro() {
 	/*var audioElement = document.createElement('audio');
@@ -230,8 +235,9 @@ $(document).ready(function() {
 		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
 	}
 	else if (android > -1) {
-		alert('android 16');
+		//alert('android 16');
 		//$("head").append('<meta name="viewport" content="width=1200px, target-densitydpi=device-dpi" />');
+		$("head").append('<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, user-scalable=no" />');
 		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
 	}
 	else {
@@ -330,7 +336,10 @@ $(document).ready(function() {
 	/* fin modal dialogs */
 	
 	nubesIn();
-	auIntro();
+	//auIntro();
+	
+	audioElement.setAttribute('src', 'audio/intro.ogg');
+	audioElement.play();
 	
 }); // fin document ready
 
