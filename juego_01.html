@@ -14,10 +14,10 @@ var isSafari   	   = navigator.userAgent.toLowerCase().indexOf('safari');
 var android 	   = navigator.userAgent.toLowerCase().indexOf("android");
 //fin vars user agent para meta viewport scale
 
-if (android > -1) {
+/*if (android > -1) {
 	alert('hola android :)');
 	//audioElement.setAttribute('src', 'audio/tap_noOk.ogg');
-}
+}*/
 
 </script>
 
@@ -48,8 +48,8 @@ var score = 0;
 var meta = '';
 
 var audioElement = document.createElement('audio');
-/*audioElement.setAttribute('autoplay', 'autoplay');
-$.get();*/
+audioElement.setAttribute('autoplay', 'autoplay');
+$.get();
 
 function auWin() {
 	/*audioElement.setAttribute('autoplay', 'autoplay');
@@ -81,8 +81,8 @@ function auWin() {
 	}*/
 	//fin iOS y Safari no reconocen .ogg
 	
-	audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();
+	/*audioElement.setAttribute('autoplay', 'autoplay');
+	$.get();*/
 	
 	audioElement.setAttribute('src', 'audio/win.mp3');
 	
@@ -121,8 +121,8 @@ function aubtn() {
 	}*/
 	//fin iOS y Safari no reconocen .ogg
 	
-	audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();
+	/*audioElement.setAttribute('autoplay', 'autoplay');
+	$.get();*/
 	
 	audioElement.setAttribute('src', 'audio/tap_ok.mp3');
 	
@@ -161,8 +161,8 @@ function aubtnNo(){
 	}*/
 	//fin iOS y Safari no reconocen .ogg
 	
-	audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();
+	/*audioElement.setAttribute('autoplay', 'autoplay');
+	$.get();*/
 	
 	audioElement.setAttribute('src', 'audio/tap_noOk.mp3');
 	
