@@ -13,6 +13,12 @@ var isiPod   	   = navigator.userAgent.toLowerCase().indexOf("ipod");
 var isSafari   	   = navigator.userAgent.toLowerCase().indexOf('safari');
 var android 	   = navigator.userAgent.toLowerCase().indexOf("android");
 //fin vars user agent para meta viewport scale
+
+if (android > -1) {
+	alert('hola android :)');
+	//audioElement.setAttribute('src', 'audio/tap_noOk.ogg');
+}
+
 </script>
 
 <!-- apple -->
@@ -75,7 +81,7 @@ function auWin() {
 	}*/
 	//fin iOS y Safari no reconocen .ogg
 	
-	audioElement.setAttribute('src', 'audio/win.ogg');
+	audioElement.setAttribute('src', 'audio/win.mp3');
 	
 	audioElement.setAttribute('autoplay', 'autoplay');
 	$.get();
@@ -112,7 +118,7 @@ function aubtn() {
 	}*/
 	//fin iOS y Safari no reconocen .ogg
 	
-	audioElement.setAttribute('src', 'audio/tap_ok.ogg');
+	audioElement.setAttribute('src', 'audio/tap_ok.mp3');
 	
 	audioElement.setAttribute('autoplay', 'autoplay');
 	$.get();
@@ -149,7 +155,7 @@ function aubtnNo(){
 	}*/
 	//fin iOS y Safari no reconocen .ogg
 	
-	audioElement.setAttribute('src', 'audio/tap_noOk.ogg');
+	audioElement.setAttribute('src', 'audio/tap_noOk.mp3');
 	
 	audioElement.setAttribute('autoplay', 'autoplay');
 	$.get();
