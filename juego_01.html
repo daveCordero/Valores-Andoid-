@@ -341,7 +341,8 @@ $(document).ready(function() {
 	}
 	else if (android > -1) {
 		//alert('android 16');
-		$("head").append('<meta name="viewport" content="width=1200px, target-densitydpi=device-dpi" />');
+		//$("head").append('<meta name="viewport" content="width=1200px, target-densitydpi=device-dpi" />');//sale de pantalla Samsung Pamela
+		$("head").append('<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi" />');
 		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
 	}
 	else {
