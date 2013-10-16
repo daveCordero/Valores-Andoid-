@@ -49,10 +49,11 @@ var isDeskIE       = navigator.userAgent.toLowerCase().indexOf("IE");*/
 
 <script language="javascript" type="text/javascript">
 
+var audioElement = document.createElement('audio');
+audioElement.setAttribute('autoplay', 'autoplay');
+$.get();
+
 function auIntro() {
-	var audioElement = document.createElement('audio');
-	audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();
 	
 	//iOS y Safari no reconocen .ogg
 	if(isiPhone > -1) {
@@ -73,8 +74,10 @@ function auIntro() {
 		audioElement.setAttribute('src', 'audio/intro.mp3');
 	}
 	else if (android > -1) {
-		alert('android 22');
-		audioElement.setAttribute('src', 'file:///android_asset/www/audio/intro.ogg');
+		//audioElement.setAttribute('src', 'file:///android_asset/www/audio/intro.ogg');
+		//var my_media = new Media("/android_asset/www/2.mp3")
+		audioElement.setAttribute('src', '/android_asset/www/audio/intro.ogg');
+		alert('android 23');
 	}
 	else {
 		audioElement.setAttribute('src', 'audio/intro.ogg');
