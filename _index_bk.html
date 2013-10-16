@@ -1,6 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">-->
+
 <head>
+
+<!--<meta name="viewport" content="width=1400px, target-densitydpi=device-dpi">
+<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, user-scalable=no" />-->
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="author" content="David Herrera Cordero | Libros para Todos GN" />
@@ -49,10 +56,15 @@ var isDeskIE       = navigator.userAgent.toLowerCase().indexOf("IE");*/
 
 <script language="javascript" type="text/javascript">
 
+/*var audioElement = document.createElement('audio');
+audioElement.setAttribute('autoplay', 'autoplay');
+$.get();*/
+
+
 function auIntro() {
-	var audioElement = document.createElement('audio');
+	/*var audioElement = document.createElement('audio');
 	audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();
+	$.get();*/
 	
 	//iOS y Safari no reconocen .ogg
 	if(isiPhone > -1) {
@@ -73,15 +85,22 @@ function auIntro() {
 		audioElement.setAttribute('src', 'audio/intro.mp3');
 	}
 	else if (android > -1) {
-		alert('android 22');
-		audioElement.setAttribute('src', 'file:///android_asset/www/audio/intro.ogg');
+		alert('audio mp3');
+		var audioElement = document.createElement('audio');
+		audioElement.setAttribute('autoplay', 'autoplay');
+		$.get();
+		
+		audioElement.setAttribute('src', 'audio/intro.ogg');
+		//audioElement.setAttribute('src', 'audio/intro.mp3');
+		
+		audioElement.play();
 	}
 	else {
 		audioElement.setAttribute('src', 'audio/intro.ogg');
 	}
 	//fin iOS y Safari no reconocen .ogg
 	
-	audioElement.play();
+	//audioElement.play();
 }
 
 
@@ -217,7 +236,8 @@ $(document).ready(function() {
 	}
 	else if (android > -1) {
 		//alert('android 16');
-		$("head").append('<meta name="viewport" content="width=1200px, target-densitydpi=device-dpi" />');
+		//$("head").append('<meta name="viewport" content="width=1200px, target-densitydpi=device-dpi" />');
+		$("head").append('<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, user-scalable=no" />');
 		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
 	}
 	else {
@@ -316,7 +336,14 @@ $(document).ready(function() {
 	/* fin modal dialogs */
 	
 	nubesIn();
-	auIntro();
+	//auIntro();
+	
+	/*var audioElement = document.createElement('audio');
+	audioElement.setAttribute('autoplay', 'autoplay');
+	$.get();
+	//audioElement.setAttribute('src', 'audio/intro.ogg');
+	audioElement.setAttribute('src', 'audio/intro.mp3');
+	audioElement.play();*/
 	
 }); // fin document ready
 
@@ -326,11 +353,12 @@ $(document).ready(function() {
 </head>
 <body>
 
-<!--<audio id="myAudio" autoplay>
+<!---->
+<audio id="myAudio" autoplay>
 	<source src="audio/intro.ogg" type="audio/ogg">
 	<source src="audio/intro.mp3" type="audio/mpeg">
 	Your browser does not support the audio tag.
-</audio>-->
+</audio>
 
 <div id="contenido">
 	
