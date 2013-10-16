@@ -7,16 +7,16 @@
 
 <name>Valores 2013</name>
 
-<!--<access origin="*" />-->
-<access origin="http://api.phonegap.com/1.0/media" />
-
-<gap:platform name="android" />
-
 <icon src="phoneGap/Icon@2x.png" gap:platform="android" gap:density="ldpi" />
 <gap:splash src="phoneGap/LDPI_landscape.png"  gap:platform="android" gap:density="ldpi" />
 <gap:splash src="phoneGap/MDPI_landscape.png"  gap:platform="android" gap:density="mdpi" />
 <gap:splash src="phoneGap/HDPI_landscape.png"  gap:platform="android" gap:density="hdpi" />
 <gap:splash src="phoneGap/XHDPI_landscape.png" gap:platform="android" gap:density="xhdpi" />
+
+<gap:platform name="android" />
+
+<!--<access origin="*" />-->
+<access origin="http://api.phonegap.com/1.0/media" />
 
 <description>
 Una iniciativa de BAC y Grupo Nación para el rescate de valores en la sociedad costarricense. Esta aplicación ha sido desarrollada por el departamento de Libros para Todos de Grupo Nación en el año 2013.

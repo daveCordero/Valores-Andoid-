@@ -1,0 +1,29 @@
+<html>
+    <h1>Playing Audio</h1>
+    <!--<button onClick="playAudio('audio/intro.mp3')">Play</button>-->
+    <button onClick="playAudio('audio/intro.ogg')">Play</button>
+
+    <script src="phonegap.js"></script>
+    <script>
+        function playAudio(src) {
+            if (device.platform == 'Android') {
+                //src = '/assets/www/' + src;
+				//src = '/android_assets/www/' + src;
+				src = 'assets/www/' + src;
+            }
+
+            var media = new Media(src, success, error_error);
+
+            media.play();
+        }
+
+        function success() {
+            // ignore
+        }
+
+        function error_error(e) {
+            alert('great error');
+            alert(e.message);
+        }
+    </script>
+</html>

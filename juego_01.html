@@ -1,14 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
-<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-<!--<meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=0.8,">-->
-<meta name="viewport" content="width=1400px, target-densitydpi=device-dpi">
-
 <meta name="author" content="David Herrera Cordero | Libros para Todos GN" />
 
 <script language="javascript" type="text/javascript">
@@ -19,12 +13,6 @@ var isiPod   	   = navigator.userAgent.toLowerCase().indexOf("ipod");
 var isSafari   	   = navigator.userAgent.toLowerCase().indexOf('safari');
 var android 	   = navigator.userAgent.toLowerCase().indexOf("android");
 //fin vars user agent para meta viewport scale
-
-/*if (android > -1) {
-	alert('hola android :)');
-	//audioElement.setAttribute('src', 'audio/tap_noOk.ogg');
-}*/
-
 </script>
 
 <!-- apple -->
@@ -58,11 +46,8 @@ audioElement.setAttribute('autoplay', 'autoplay');
 $.get();
 
 function auWin() {
-	/*audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();*/
-	
 	//iOS y Safari no reconocen .ogg
-	/*if(isiPhone > -1) {
+	if(isiPhone > -1) {
 		//alert('iphone 22');
 		audioElement.setAttribute('src', 'audio/win.mp3');
 	}
@@ -84,25 +69,16 @@ function auWin() {
 	}
 	else {
 		audioElement.setAttribute('src', 'audio/win.ogg');
-	}*/
+	}
 	//fin iOS y Safari no reconocen .ogg
 	
-	/*audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();*/
-	
-	audioElement.setAttribute('src', 'audio/win.mp3');
-	
-	/*audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();*/
 	audioElement.play();
 }
 
 function aubtn() {
-	/*audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();*/
 	
 	//iOS y Safari no reconocen .ogg
-	/*if(isiPhone > -1) {
+	if(isiPhone > -1) {
 		//alert('iphone 22');
 		audioElement.setAttribute('src', 'audio/tap_ok.mp3');
 	}
@@ -124,25 +100,16 @@ function aubtn() {
 	}
 	else {
 		audioElement.setAttribute('src', 'audio/tap_ok.ogg');
-	}*/
+	}
 	//fin iOS y Safari no reconocen .ogg
 	
-	/*audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();*/
-	
-	audioElement.setAttribute('src', 'audio/tap_ok.mp3');
-	
-	/*audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();*/
 	audioElement.play();
 }
 
 function aubtnNo(){
-	/*audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();*/
 	
 	//iOS y Safari no reconocen .ogg
-	/*if(isiPhone > -1) {
+	if(isiPhone > -1) {
 		//alert('iphone 22');
 		audioElement.setAttribute('src', 'audio/tap_noOk.mp3');
 	}
@@ -164,16 +131,8 @@ function aubtnNo(){
 	}
 	else {
 		audioElement.setAttribute('src', 'audio/tap_noOk.ogg');
-	}*/
+	}
 	//fin iOS y Safari no reconocen .ogg
-	
-	/*audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();*/
-	
-	audioElement.setAttribute('src', 'audio/tap_noOk.mp3');
-	
-	/*audioElement.setAttribute('autoplay', 'autoplay');
-	$.get();*/
 	
 	audioElement.play();
 }
@@ -346,22 +305,8 @@ $(document).ready(function() {
 		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
 	}
 	else if (android > -1) {
-		//alert('android 21');
-		
-		if (window.devicePixelRatio == 1.5) {
-			alert("This is a high-density screen");
-		} else if (window.devicePixelRatio == 0.75) {
-			alert("This is a low-density screen");
-		} else {
-			alert("density screen ???");
-		}
-		//$("head").append('<meta name="viewport" content="width=1200px, target-densitydpi=device-dpi" />');//sale de pantalla Samsung Pamela
-		//$("head").append('<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi" />');
-		//$("head").append('<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">');
-		//$("head").append('<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no">');
-		//$("head").append('<meta name="viewport" content="height=device-height, target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no">');
-		//$("head").append('<meta name="viewport" content="height=device-height, target-densitydpi=device-dpi, user-scalable=no">');
-		//$("head").append('<meta name="viewport" content="width=960, target-densitydpi=device-dpi">');
+		//alert('android 16');
+		$("head").append('<meta name="viewport" content="width=1200px, target-densitydpi=device-dpi" />');
 		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
 	}
 	else {
