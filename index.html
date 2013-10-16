@@ -319,7 +319,11 @@ $(document).ready(function() {
 	/* fin modal dialogs */
 	
 	nubesIn();
-	auIntro();
+	//auIntro();
+	
+	audioElement.setAttribute('src', '/android_asset/www/audio/intro.ogg');
+	audioElement.play();
+	alert('android 23');
 	
 }); // fin document ready
 
