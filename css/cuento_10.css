@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#tituloCuento {
+	background-image:url(../img/titulo_ninos_s04.png);
+}
+
+#boxValores {
+	color:#333;
+}
+
+#zoombtn {
+	left:326px;
+}
+
+#titleZoomColibri {
+	background-image:url(../img/titulo_zoom_ninos_s04.png);
+}
+

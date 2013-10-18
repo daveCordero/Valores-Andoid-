@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#general {
+	background:url(../img/cuento_02/bg_cuento_bestia.png) no-repeat center 0px;
+}
+
+#tituloCuento {
+	background-image:url(../img/titulo_cuento_s02.png);
+}
+
+#boxValores {
+	/*background:#666;*/
+	top:22px;
+	right:0px;
+	color:#333;
+}
+
+/*#spanboxValores {
+	color:#777;
+}*/
+
+#titleZoomBestia {
+	background-image:url(../img/titulo_zoom_s02.png);
+}
+

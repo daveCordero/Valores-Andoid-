@@ -1,0 +1,275 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background-image:url(../img/bg.jpg);
+	background-position:center -700;
+	
+	/*no soportado por android browser nativo
+	background-attachment:fixed;
+	background-size:cover;
+	-moz-background-size:cover;
+	-webkit-background-size:cover;*/
+}
+
+.pagination-car {
+	width:130px;
+	margin:0px 0px 0px -65px;
+}
+
+#tituloCuento {
+	/*background-image: definido en cuento_xx.css
+	background-color:#CCC;*/
+	background-position:center 0px;
+	background-repeat:no-repeat;
+	
+	width:620px;
+	/*height:115px;*/
+	height:70px;
+	
+	top:50px;
+	margin:0px 0px 0px -263px;
+	z-index:20;
+}
+
+#playbtn {
+	/*background-color:#C00;*/
+	background-image:url(../img/bt_playLista.png);
+	
+	width:90px;
+	height:35px;
+	
+	top:14px;
+	left:225px;
+		
+	z-index:25;
+}
+
+#pausebtn {
+	background-image:url(../img/bt_stopLista.png);
+	
+	width:80px;
+	height:35px;
+	
+	top:14px;
+	left:225px;
+	
+	z-index:25;
+}
+
+#frasesbtn {
+	/*background-color:#666;*/
+	background-image:url(../img/bt_frasesLista.png);
+	
+	width:72px;
+	height:35px;
+	
+	top:14px;
+	left:329px;
+	
+	z-index:26;
+}
+
+#zoombtn {
+	/*background-color:#666;*/
+	background-image:url(../img/bt_zoomLista.png);
+	
+	width:96px;
+	height:35px;
+	
+	top:14px;
+	left:414px;
+	
+	z-index:26;
+}
+
+#zoomOutbtn {
+	/*background:#333;*/
+	background-image:url(../img/bt_zoomOutLista.png);
+	
+	width:70px;
+	height:35px;
+	
+	top:20px;
+	right:20px;
+	
+	z-index:98001; /* > #imgBig */
+}
+
+/*#imgBig {
+	background:#FFF;
+	width:100%;
+	height:100%;
+	overflow-y:scroll !important;
+	z-index:98000;
+	font-size:21px;
+}
+
+#bigCont {
+	position:relative !important;
+	width:960px;
+	margin:0px auto 0px auto;
+	padding:0px 0px 40px 0px;
+}*/
+
+.titleZoom {
+	/*background-color:#999;*/
+	background-position:center;
+	background-repeat:no-repeat;
+	height:115px;
+	margin:20px 0px 40px 0px;
+}
+
+#boxFrases {
+	background:#FFF;
+	
+	width:740px;
+	/*height:500px;*/
+	height:auto !important;
+	
+	padding:10px 20px 10px 20px;
+	margin-top:600px;
+	
+	/*overflow-y:scroll;
+	overflow-x:hidden;*/
+	
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+	filter: alpha(opacity=90);
+	-moz-opacity:0.9;
+	-khtml-opacity:0.9;
+	opacity:0.9;
+}
+
+.sepFrase {
+	background:url(../img/sepProv.png) no-repeat center;
+	height:17px;
+	/*margin:-4px 0px 9px 0px;*/
+	margin:0px 0px 6px 0px;
+}
+
+.fraseNombre {
+	/*background:#CCC;*/
+	margin:2px 0px 4px 0px;
+	/*font-family: 'Muli';
+	font-style:bold;*/
+	font-size:15px;
+	color:#6D2773;
+}
+
+#btCloseProv {
+	/*background:#6F0;*/
+	background-color:transparent;
+	background:url(../img/bt_closeCerdits.png) no-repeat;
+	background-position:0px 0px;
+	display:block;
+	position:absolute;
+	top:-10px;
+	right:-10px;
+	width:24px;
+	height:24px;
+}
+#btCloseProv:hover {
+	/*background:#6F0;*/
+	background:url(../img/bt_closeCerdits.png) no-repeat;
+	background-position:-24px 0px;
+}
+
+#boxValores {
+	/*background:#666;*/
+	top:22px;
+	right:0px;
+	color:#FFF;
+}
+
+/*#spanboxValores {
+	color:#E3E3E3;
+}*/
+
+#pantalla00 {
+	margin-top:0px;
+}
+
+#welcome {
+	background:#FFF;
+	
+	top:50%;
+	left:50%;
+	
+	width:670px;
+	height:250px;
+	padding:30px;
+	margin:-150px 0px 0px -350px;
+}
+
+#tituloApp {
+	/*background:#CCC;*/
+	border-bottom:#CCC solid 2px;
+	
+	width:460px;
+	top:40px;
+	left:230px;
+	
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 20px 0px;
+	
+	font-size:60px;
+	color:#444;
+}
+
+.instru {
+	/*background:#999;*/
+	width:480px;
+	top:130px;
+	left:230px;
+	/*padding-left:200px;*/
+	font-size:42px;
+	line-height:42px;
+	color:#6F2975;
+}
+
+.icoGrande {
+	background-color:#6F2975;
+	
+	width:94px;
+	height:94px;
+	margin:-77px 0px 0px 0px;
+}
+.icoGrande:hover {
+	background-color:#555;
+}
+
+#icoClose {
+	background-image:url(../img/ico_close_gde.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	float:right;
+	margin-right:-77px;
+}
+
+#instruSlide {
+	/*background-color:#999;*/
+	background-image:url(../img/instru_slide.png);
+	background-position:center 0px;
+	background-repeat:no-repeat;
+	
+	top:90px;
+	left:0px;
+	
+	width:230px;
+	height:92px;
+	z-index:1000;
+}
+
+#btInfo {
+	/*background-color:#999;*/
+	left:120px;
+}
+
+#btAtras {
+	left:47px;
+}
+
+/*html {
+	overflow-y: scroll;
+}*/
+

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#general {
+	background:url(../img/cuento_06/bg_cuento_flor.png) no-repeat center 0px;
+}
+
+#tituloCuento {
+	background-image:url(../img/titulo_cuento_s06.png);
+}
+
+#boxValores {
+	color:#333;
+}
+
+/*#spanboxValores {
+	color:#777;
+}*/
+
+#titleZoomFlor {
+	background-image:url(../img/titulo_zoom_s06.png);
+}
+
