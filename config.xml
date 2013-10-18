@@ -15,8 +15,9 @@
 
 <gap:platform name="android" />
 
-<!--<access origin="*" />-->
-<access origin="http://api.phonegap.com/1.0/media" />
+<!--<access origin="*" />
+<access origin="http://api.phonegap.com/1.0/media" />-->
+<access origin="http://librosparatodoscr.com/apps/valores/audio" />
 
 <feature name="http://api.phonegap.com/1.0/media"/>
 <feature name="http://api.phonegap.com/1.0/file"/>
