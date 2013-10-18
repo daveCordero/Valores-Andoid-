@@ -39,13 +39,11 @@
 */
 
 
-
 /* precarga */
 #pre-load-web {width:100%;position:absolute;background:#FFF;left:0px;top:0px;z-index:100000} /*#DBDED9*/
 /*aqui centramos la imagen si coloco margin left -30 es por que la imagen mide 60 */
 #pre-load-web #imagen-load{left:50%;margin-left:-30px;position:absolute}
 /* fin precarga */
-
 
 
 @font-face {
@@ -54,6 +52,23 @@
   font-weight: 400;
   src: local('Muli'), url(../fonts/muli/minRpKQdEvXRRS8oAbAtWvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
 }
+
+
+@-o-viewport {
+  width: device-width;
+  height: device-height;
+}
+
+@-ms-viewport {
+  width: device-width;
+  height: device-height;
+}
+
+@-viewport {
+  width: device-width;
+  height: device-height;
+}
+
 
 body {
 	/*background-color:#FFEFBF;/*amarillo*/
