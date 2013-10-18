@@ -18,6 +18,9 @@
 <!--<access origin="*" />-->
 <access origin="http://api.phonegap.com/1.0/media" />
 
+<feature name="http://api.phonegap.com/1.0/media"/>
+<feature name="http://api.phonegap.com/1.0/file"/>
+
 <description>
 Una iniciativa de BAC y Grupo Nación para el rescate de valores en la sociedad costarricense. Esta aplicación ha sido desarrollada por el departamento de Libros para Todos de Grupo Nación en el año 2013.
 </description>
