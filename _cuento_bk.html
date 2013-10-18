@@ -886,8 +886,7 @@ $(document).ready(function() {
             <a class="disblock posAbsolute tran100 btnLista" id="btHome" href="javascript:var proxPantalla = 'index.html'" onClick="flipPage();"></a>
             <a class="disblock posAbsolute tran100 btnLista" id="btInfo" href="javascript:void(0)" onClick="goInfo();"></a>
             
-            <a href="#dialog5" name="modal" class="disblock posAbsolute btnLista" id="playbtn"></a>
-			<!--<a href="javascript:void(0)" class="disblock posAbsolute btnLista" id="playbtn"   onclick="playAudio();"></a>-->
+			<a href="javascript:void(0)" class="disblock posAbsolute btnLista" id="playbtn"   onclick="playAudio();"></a>
 			<a href="javascript:void(0)" class="disNone posAbsolute btnLista"  id="pausebtn"  onclick="pauseAudio();"></a>
 			<a href="#dialog4" name="modal" class="disblock posAbsolute btnLista" id="zoombtn"></a>
             
@@ -1023,14 +1022,10 @@ $(document).ready(function() {
         </div><!--/#dialog4-->
         
         <div id="dialog5" class="window">
-        	<a href="javascript:void(0)" class="close" id="btCloseCredits"></a>
-        	<!--<div id="creditosD">-->
-        		<audio controls="true" align="center" style="width:400px; margin:30px auto 0px auto;">
-                    <source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/NO_DEJARE_MI_SUENO.mp3"/>
-                    <source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/NO_DEJARE_MI_SUENO.ogg"/>
-                    Su navegador no soporta audio para HTML5.
-                </audio>
-            <!--</div>/#creditosD-->
+        	<div id="creditosD">
+        		//
+            </div><!--/#creditosD-->
+            <a href="javascript:void(0)" class="close disblock posAbsolute" id="zoomOutbtn"></a><!---->
         </div><!--/#dialog4-->
 		
 		<!-- Mask to cover the whole screen -->

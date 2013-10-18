@@ -215,6 +215,25 @@ a {
 	-khtml-border-radius:10px;
 	border-radius:10px;
 }
+
+#boxes #dialog5 {
+	background:#FFF;
+	
+	width:400px;
+	height:80px;
+	
+	/*overflow:hidden !important;*/
+	
+	overflow:visible !important;
+	
+	margin:-50px 0px 0px 0px;
+	padding:10px 20px 20px 20px;
+	
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	-khtml-border-radius:10px;
+	border-radius:10px;
+}
 /* fin modal dialogs */
 
 #creditosH {
