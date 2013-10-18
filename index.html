@@ -12,8 +12,9 @@
 <meta name="author" content="David Herrera Cordero | Libros para Todos GN" />
 
 <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=device-dpi" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;">-->
-<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, height=device-height, width=device-width, target-densityDpi=device-dpi" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, height=device-height, width=device-width, target-densityDpi=device-dpi" />-->
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, height=600, width=900, target-densityDpi=device-dpi" />
 
 <script language="javascript" type="text/javascript">
 //alert(navigator.platform);
@@ -178,6 +179,7 @@ function nube03RL() {
 }//fin nube02RL
 
 
+/*
 // Listen for orientation changes
 window.addEventListener("orientationchange", function() {
   //alert(window.orientation); //Announce the new orientation number
@@ -187,14 +189,14 @@ window.addEventListener("orientationchange", function() {
   /*chrome no funciona en esta orientacion
   if (window.orientation == 180){
 	  $("#turnScreen").fadeIn(0);
-  }*/
+  }* /
   if (window.orientation == 90){
 	  $("#turnScreen").fadeOut(0);
   }
   if (window.orientation == -90){
 	  $("#turnScreen").fadeOut(0);
   }
-}, false);
+}, false);*/
 
 
 $(document).ready(function() {
@@ -341,12 +343,6 @@ $(document).ready(function() {
 </head>
 <body>
 
-<!--<audio id="myAudio" autoplay>
-	<source src="audio/intro.ogg" type="audio/ogg">
-	<source src="audio/intro.mp3" type="audio/mpeg">
-	Your browser does not support the audio tag.
-</audio>-->
-
 <div id="contenido">
 	
 	<div id="general">
@@ -366,10 +362,7 @@ $(document).ready(function() {
 			<a class="disblock posAbsolute bthome alpha80hover tran100"			  href="javascript:var proxPantalla = 'fasciculo.html?05'" onClick="flipPage();" id="bthome5"></a>
 			<a class="disblock posAbsolute bthome alpha80hover tran100 noMarginR" href="javascript:var proxPantalla = 'fasciculo.html?06'" onClick="flipPage();" id="bthome6"></a>
 			
-			<div id="logosBlock" class="disblock posAbsolute">
-            	<!--<a href="https://www.bac.net/bacsanjose/" target="_blank" class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoBac"></a>
-                <a href="http://www.gruponacion.co.cr" target="_blank" class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></a>-->
-            </div><!--/#logosBlock-->
+			<div id="logosBlock" class="disblock posAbsolute"></div><!--/#logosBlock-->
             
             <a href="#dialog3" name="modal" class="disblock posAbsolute btnLista" id="btPresentacion"></a>
 			<a href="#dialog2" name="modal" class="disblock posAbsolute btnLista" id="btcreditos"></a>
