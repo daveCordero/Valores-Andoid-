@@ -15,12 +15,12 @@
 
 <gap:platform name="android" />
 
+<feature name="http://api.phonegap.com/1.0/media"/>
+<feature name="http://api.phonegap.com/1.0/file"/>
+
 <!--<access origin="*" />
 <access origin="http://api.phonegap.com/1.0/media" />-->
 <access origin="http://librosparatodoscr.com/apps/valores/audio" />
-
-<feature name="http://api.phonegap.com/1.0/media"/>
-<feature name="http://api.phonegap.com/1.0/file"/>
 
 <description>
 Una iniciativa de BAC y Grupo Nación para el rescate de valores en la sociedad costarricense. Esta aplicación ha sido desarrollada por el departamento de Libros para Todos de Grupo Nación en el año 2013.
