@@ -99,7 +99,7 @@ function auIntro() {
 		audioElement.setAttribute('src', 'http://librosparatodoscr.com/apps/valores/audio/intro.mp3');
 	}
 	else if (android > -1) {
-		alert('android 17');
+		//alert('android 17');
 		//audioElement.setAttribute('src', 'http://librosparatodoscr.com/apps/valores/audio/intro.ogg');
 		audioElement.setAttribute('src', 'http://librosparatodoscr.com/apps/valores/audio/intro.ogg');
 	}
@@ -245,7 +245,8 @@ $(document).ready(function() {
 		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
 	}
 	else if (android > -1) {
-		//alert('android 16');
+		//alert('android 18');
+		alert( 'Your screen resolution is ' + screen.width + 'x' + screen.height );
 		//$("head").append('<meta name="viewport" content="width=1200px, target-densitydpi=device-dpi" />');
 		//$("head").append('<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi" />');
 		//$("head").append('<meta name="viewport" content="height=device-height, target-densitydpi=device-dpi" />');
