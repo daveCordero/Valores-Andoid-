@@ -1,10 +1,35 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd" >-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="author" content="David Herrera Cordero | Libros para Todos GN" />
 
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=device-dpi" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, height=600, width=900, target-densityDpi=device-dpi" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=1200, target-densityDpi=device-dpi" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, height=device-height, width=device-width, target-densityDpi=device-dpi" />
+<meta name="viewport" content="width=device-width, target-densityDpi=device-dpi" />
+<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, height=device-height, width=device-width" />
+<meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, height=device-height, width=device-width" />
+<meta name="viewport" content="initial-scale=.5, maximum-scale=.5" />
+<meta name="viewport" content="width=2000px, target-densityDpi=device-dpi" />
+<meta name="viewport" content="width=2000, target-densityDpi=device-dpi" />
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, height=device-height, width=device-width, target-densityDpi=high-dpi" />
+<meta name="viewport" content="initial-scale=.5, maximum-scale=1.0, minimum-scale=1.0, height=device-height, width=device-width, target-densityDpi=device-dpi" />
+<meta name="viewport" content="initial-scale=0.7, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />
+<meta name="viewport" content="initial-scale=.7, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />
+<meta name="viewport" content="initial-scale=.85, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />
+<meta name="viewport" content="initial-scale=.8, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />-->
+<!--probar initial-scale 90% | sin max min-->
 
 <script language="javascript" type="text/javascript">
 //alert(navigator.platform);
@@ -43,6 +68,7 @@ var isDeskIE       = navigator.userAgent.toLowerCase().indexOf("IE");*/
 
 
 <script type="text/javascript" src="js/googleapis/jquery.min.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
 <script type="text/javascript" src='js/jquery.transit.min.js'></script>
 <script type="text/javascript" src="js/jQueryRotate.js"></script>
 
@@ -74,6 +100,7 @@ function auIntro() {
 	}
 	else if (android > -1) {
 		//alert('android 17');
+		//audioElement.setAttribute('src', 'http://librosparatodoscr.com/apps/valores/audio/intro.ogg');
 		audioElement.setAttribute('src', 'http://librosparatodoscr.com/apps/valores/audio/intro.ogg');
 	}
 	else {
@@ -130,6 +157,12 @@ function nubesIn() {
 
 function nube01LR() {
 	var timerNube01LR = setTimeout(function() {
+		
+		//auIntro();
+		/*var pElement3 = document.getElementById('myAudio');
+		pElement3.play();
+		alert('play ?');*/
+		
 		$('#nube01').animate({ 'left':800 }, 20000, function(){ $(this).fadeOut(500); });
 		clearTimeout(timerNube01LR);
 	}, 2000);
@@ -161,7 +194,7 @@ function nube03RL() {
 }//fin nube02RL
 
 
-
+/*
 // Listen for orientation changes
 window.addEventListener("orientationchange", function() {
   //alert(window.orientation); //Announce the new orientation number
@@ -171,18 +204,19 @@ window.addEventListener("orientationchange", function() {
   /*chrome no funciona en esta orientacion
   if (window.orientation == 180){
 	  $("#turnScreen").fadeIn(0);
-  }*/
+  }* /
   if (window.orientation == 90){
 	  $("#turnScreen").fadeOut(0);
   }
   if (window.orientation == -90){
 	  $("#turnScreen").fadeOut(0);
   }
-}, false);
+}, false);*/
 
 
 $(document).ready(function() {
 	
+	/*
 	// precarga
 	//eliminamos el scroll de la pagina
 	$("body").css({"overflow-y":"hidden"});
@@ -194,50 +228,77 @@ $(document).ready(function() {
 	$("#pre-load-web").css({height:alto+"px"});
 	//esta sera la capa que esta dento de la capa que muestra un gif
 	$("#imagen-load").css({"margin-top":(alto/2)-30+"px"});
-	// fin precarga
+	// fin precarga*/
 	
 	//define meta viewport scale
 	if(isiPhone > -1) {
 		//alert('iphone 24');
-		$("head").append('<meta name="viewport" content="user-scalable=yes, initial-scale=0.490, maximum-scale=0.490" />');
+		//auIntro();
+		//$("head").append('<meta name="viewport" content="user-scalable=yes, initial-scale=0.490, maximum-scale=0.490" />');
 		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
 		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
 	}
 	else if(isiPod > -1) {
 		//alert('ipod');
-		$("head").append('<meta name="viewport" content="user-scalable=yes, initial-scale=0.490, maximum-scale=0.490" />');
+		//$("head").append('<meta name="viewport" content="user-scalable=yes, initial-scale=0.490, maximum-scale=0.490" />');
 		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
 		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
 	}
 	else if (android > -1) {
+		//alert('android 18');
+		//alert( 'Your screen resolution is ' + screen.width + 'x' + screen.height );
+		//$("head").append('<meta name="viewport" content="width=1200px, target-densitydpi=device-dpi" />');
+		//$("head").append('<meta name="viewport" content="width=device-width, target-densitydpi=device-dpi" />');
+		//$("head").append('<meta name="viewport" content="height=device-height, target-densitydpi=device-dpi" />');
+		//$("head").append('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=device-dpi" />');
 		
 		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
 		
 		if ( screen.width > 1100 ) {
-			//alert('mayor que 1100');
+			
+			alert('mayor que 1100');
 			$("head").append('<meta name="viewport" content="initial-scale=1.1, maximum-scale=1.1, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
+		
 		} else if ( (screen.width < 1100) && (screen.width >= 1000) ) {
+			
+			//alert('mayor que 1000');
 			$("head").append('<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
+		
 		} else if ( (screen.width < 1000) && (screen.width >= 900) ) {
+			
 			$("head").append('<meta name="viewport" content="initial-scale=.9, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
+		
 		} else if ( (screen.width < 900) && (screen.width >= 800) ) {
+			
 			$("head").append('<meta name="viewport" content="initial-scale=.8, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
+		
 		} else if ( (screen.width < 800) && (screen.width >= 700) ) {
+			
 			$("head").append('<meta name="viewport" content="initial-scale=.7, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
+		
 		} else if ( (screen.width < 700) && (screen.width >= 600) ) {
+		
 			$("head").append('<meta name="viewport" content="initial-scale=.6, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
+		
 		} else if ( (screen.width < 600) && (screen.width >= 500) ) {
+		
 			$("head").append('<meta name="viewport" content="initial-scale=.5, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
+		
 		} else if ( (screen.width < 500) && (screen.width >= 400) ) {
+		
 			$("head").append('<meta name="viewport" content="initial-scale=.4, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
+		
 		} else if ( (screen.width < 400) && (screen.width >= 300) ) {
+		
 			$("head").append('<meta name="viewport" content="initial-scale=.3, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
+		
 		}//if screen.width
+		
 		//alert('screen width' + screen.width);
 		
 	}
 	else {
-		$("head").append('<meta name="viewport" content="height=600px, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />');
+		//$("head").append('<meta name="viewport" content="height=600px, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1" />');
 		$("#logosBlock").append('<a href="https://www.bac.net/bacsanjose/" target="_blank" class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></a> <a href="http://www.gruponacion.co.cr" target="_blank" class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></a>');
 		window.scrollTo(0, 0);//hide url bar mobiles //no funciona al 100% en android
 	}

@@ -54,7 +54,7 @@
 }
 
 
-@-o-viewport {
+/*@-o-viewport {
   width: device-width;
   height: device-height;
 }
@@ -67,7 +67,7 @@
 @-viewport {
   width: device-width;
   height: device-height;
-}
+}*/
 
 
 body {
