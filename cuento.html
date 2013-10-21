@@ -1239,6 +1239,7 @@ $(document).ready(function() {
 							case '01'://principe feliz
 								$('#pantalla01').append('<a class="disblock posAbsolute tran100 btnLista" href="fasciculo.html?' + cuento + '" onclick="flipPage();" id="btAtras"></a>');
 								$("#swipers").append("<img class='swiper-slide' src='img/cuento_01/s01.png'> <img class='swiper-slide' src='img/cuento_01/s02.png'> <img class='swiper-slide' src='img/cuento_01/s03.png'> <img class='swiper-slide' src='img/cuento_01/s04.png'> <img class='swiper-slide' src='img/cuento_01/s05.png'> <img class='swiper-slide' src='img/cuento_01/s06.png'> <img class='swiper-slide' src='img/cuento_01/s07.png'>");
+								$("#playerCuento").append('<source src="audio/cuentos_ninos/LA_DISIPLINA_NOS_HACE_FELICES.ogg" type="audio/ogg" />');
 							break;
 							
 							case '02'://la bella y la bestia
@@ -1355,7 +1356,7 @@ $(document).ready(function() {
         </div><!--/#dialog4-->
         
         <div id="dialog5" class="window">
-			<a href="javascript:void(0)" class="close" id="btCloseCredits" onclick="document.getElementById('playerCuento').pause();"></a>
+			<a href="javascript:void(0)" class="close" id="btCloseCredits" onclick="javascript:document.getElementById('playerCuento').pause();"></a>
 			<!--<video src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.mp3" onclick="this.play();"></video>-->
             
             <!--<audio controls="true" align="center" style="width:400px; margin:30px auto 0px auto;" id="playerCuento">
@@ -1367,7 +1368,10 @@ $(document).ready(function() {
 				Su navegador no soporta audio HTML5.
 			</video>-->
             
-            <audio autoplay="autoplay" controls="controls" style="width:400px; margin:20px auto 0px auto;" id="playerCuento">
+			<audio autoplay="autoplay" preload="auto" controls style="width:400px; margin:20px auto 0px auto;" id="playerCuento">
+            	
+                
+                
 				Su navegador no soporta audio HTML5.
 			</audio>
             
