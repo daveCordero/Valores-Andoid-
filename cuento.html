@@ -775,6 +775,9 @@ $(document).ready(function() {
 	
 	//if mask is clicked
 	$('#mask').click(function () {
+		document.getElementById('playerCuento').pause();
+		//$('#elevator')[0].pause();
+		//document.getElementsByTagName('audio')[0].pause()
 		$(this).hide();
 		$('.window').hide();
 	});			
