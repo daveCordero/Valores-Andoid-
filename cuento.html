@@ -534,34 +534,36 @@ $(document).ready(function() {
 					switch(cuento) {
 						
 						case '01'://principe feliz
-							$("#playerCuento").append('<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_DISIPLINA_NOS_HACE_FELICES.ogg" type="audio/ogg" />');
-							alert('963');
+							//$("#playerCuento").append('<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_DISIPLINA_NOS_HACE_FELICES.ogg" type="audio/ogg" />');
+							//alert('963');
 						break;
 							
 						case '02'://la bella y la bestia
-							$("#playerCuento").append('<source src="audio/cuentos_ninos/LA_DISIPLINA_NOS_HACE_FELICES.ogg" type="audio/ogg" />');
+							//$("#playerCuento").append('<source src="audio/cuentos_ninos/" type="audio/ogg" />');
 						break;
 							
 						case '03'://pulgarcito
-							$("#playerCuento").append('<source src="audio/cuentos_ninos/LA_DISIPLINA_NOS_HACE_FELICES.ogg" type="audio/ogg" />');
+							//$("#playerCuento").append('<source src="audio/cuentos_ninos/" type="audio/ogg" />');
 						break;
 						
 						case '04'://el abuelo y el nieto
-							$("#playerCuento").append('<source src="audio/cuentos_ninos/LA_DISIPLINA_NOS_HACE_FELICES.ogg" type="audio/ogg" />');
+							//$("#playerCuento").append('<source src="audio/cuentos_ninos/" type="audio/ogg" />');
 						break;
 						
 						case '05'://el gigante egoista
-							$("#playerCuento").append('<source src="audio/cuentos_ninos/LA_DISIPLINA_NOS_HACE_FELICES.ogg" type="audio/ogg" />');
+							//$("#playerCuento").append('<source src="audio/cuentos_ninos/" type="audio/ogg" />');
 						break;
 						
 						case '06'://la flor mas bonita
-							$("#playerCuento").append('<source src="audio/cuentos_ninos/LA_DISIPLINA_NOS_HACE_FELICES.ogg" type="audio/ogg" />');
+							//$("#playerCuento").append('<source src="audio/cuentos_ninos/" type="audio/ogg" />');
 						break;
 						
 						//cuentos de los niños
 						
 						case '07'://La union
 							//iOS y Safari no reconocen .ogg
+							alert('852');
+							
 							if(isiPhone > -1) {
 								$("#playerCuento").append('<source src="audio/cuentos_ninos/LA_UNION.mp3" type="audio/mp3" />');
 							}
@@ -576,6 +578,7 @@ $(document).ready(function() {
 							}
 							else if (android > -1) {
 								$("#playerCuento").append('<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_UNION.ogg" type="audio/ogg" />');
+								alert('741');
 							}
 							else {
 								$("#playerCuento").append('<source src="audio/cuentos_ninos/LA_UNION.ogg" type="audio/ogg" />');
