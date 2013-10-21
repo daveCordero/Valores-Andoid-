@@ -903,7 +903,7 @@ $(document).ready(function() {
 			else if (android > -1) {
 				//alert('android append playerCuento');
 				//audioElement.setAttribute('src', 'http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.ogg');
-				$("#playerCuento").append('<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.ogg"/>');
+				$("#playerCuento").append('<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.ogg" type="audio/ogg" />');
 			}
 			else {
 				//audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.ogg');
@@ -1361,10 +1361,14 @@ $(document).ready(function() {
 			</audio>
             <video src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.mp3" onclick="this.play();"></video>-->
             
-            <audio controls="true" align="center" style="width:400px; margin:30px auto 0px auto;" id="playerCuento">
-            	<!--<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.ogg"/>-->
+            <!--<audio controls="true" align="center" style="width:400px; margin:30px auto 0px auto;" id="playerCuento">
+            	<!--<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.ogg"/>-- >
 				Su navegador no soporta audio HTML5.
-			</audio>
+			</audio>-->
+            
+            <video controls="true" align="center" style="width:400px; margin:20px auto 0px auto;" id="playerCuento">
+				Su navegador no soporta audio HTML5.
+			</video>
             
         </div><!--/#dialog4-->
 		
