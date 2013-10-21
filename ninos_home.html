@@ -187,31 +187,10 @@ $(document).ready(function() {
 		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
 	}
 	else if (android > -1) {
-		
-		if ( screen.width > 1100 ) {
-			//alert('mayor que 1100');
-			$("head").append('<meta name="viewport" content="initial-scale=1.1, maximum-scale=1.1, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
-		} else if ( (screen.width < 1100) && (screen.width >= 1000) ) {
-			$("head").append('<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
-		} else if ( (screen.width < 1000) && (screen.width >= 900) ) {
-			$("head").append('<meta name="viewport" content="initial-scale=.9, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
-		} else if ( (screen.width < 900) && (screen.width >= 800) ) {
-			$("head").append('<meta name="viewport" content="initial-scale=.8, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
-		} else if ( (screen.width < 800) && (screen.width >= 700) ) {
-			$("head").append('<meta name="viewport" content="initial-scale=.7, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
-		} else if ( (screen.width < 700) && (screen.width >= 600) ) {
-			$("head").append('<meta name="viewport" content="initial-scale=.6, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
-		} else if ( (screen.width < 600) && (screen.width >= 500) ) {
-			$("head").append('<meta name="viewport" content="initial-scale=.5, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
-		} else if ( (screen.width < 500) && (screen.width >= 400) ) {
-			$("head").append('<meta name="viewport" content="initial-scale=.4, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
-		} else if ( (screen.width < 400) && (screen.width >= 300) ) {
-			$("head").append('<meta name="viewport" content="initial-scale=.3, maximum-scale=1.0, minimum-scale=.5, user-scalable=yes, height=device-height, width=device-width, target-densityDpi=device-dpi" />');
-		}//if screen.width
-		//alert('screen width' + screen.width);
-		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
+		//alert('android 16');
+		$("head").append('<meta name="viewport" content="width=1200px, target-densitydpi=device-dpi" />');
 		$("#instru").append('Seleccione el cuento que desea leer.');
-		
+		$("#logosBlock").append('<div class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></div> <div class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></div>');
 	}
 	else {
 		//alert('desktop or laptop');
@@ -371,7 +350,7 @@ $(document).ready(function() {
 							break;
 							
 							case '02':
-								$("#contNinosHome").append("<a class='disblock floatL btNinos alpha80hover tran100' href='cuento.html?11'><img src='img/ninos_home_s05.png' /></a> <a class='disblock floatL btNinos alpha80hover tran100' href='cuento.html?12'><img src='img/ninos_home_s06.png' /></a> <a class='disblock floatL btNinos alpha80hover tran100' href='cuento.html?10'><img src='img/ninos_home_s04.png' /></a>");
+								$("#contNinosHome").append("<a class='disblock floatL btNinos alpha80hover tran100' href='cuento.html?12'><img src='img/ninos_home_s06.png' /></a> <a class='disblock floatL btNinos alpha80hover tran100' href='cuento.html?10'><img src='img/ninos_home_s04.png' /></a>");
 							break;
 							
 							case '03':
@@ -379,7 +358,7 @@ $(document).ready(function() {
 							break;
 							
 							case '04':
-								$("#contNinosHome").append("<a class='disblock floatL btNinos alpha80hover tran100' href='cuento.html?09'><img src='img/ninos_home_s03.png' /></a>");
+								$("#contNinosHome").append("<a class='disblock floatL btNinos alpha80hover tran100' href='cuento.html?09'><img src='img/ninos_home_s03.png' /></a> <a class='disblock floatL btNinos alpha80hover tran100' href='cuento.html?11'><img src='img/ninos_home_s05.png' /></a>");
 							break;
 							
 							case '05':

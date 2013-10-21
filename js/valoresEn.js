@@ -47,7 +47,7 @@ switch(valoresTxt) {
 	break;
 	
 	case '11'://Pueblo Paz y pueblo Sucio
-		$('#boxValores').append('• Amabilidad •');
+		$('#boxValores').append('• Respeto •');
 	break;
 	
 	case '12'://Los títeres y el carpintero

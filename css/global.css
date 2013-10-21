@@ -167,6 +167,8 @@ a {
 	width:480px;
 	height:400px;
 	
+	overflow:visible !important;
+	
 	margin:-50px 0px 0px 0px;
 	padding:10px 20px 20px 20px;
 	
@@ -182,7 +184,9 @@ a {
 	background:#FFF;
 	
 	width:480px;
-	height:320px;
+	height:420px;
+	
+	overflow:visible !important;
 	
 	margin:-50px 0px 0px 0px;
 	padding:10px 20px 20px 20px;
@@ -277,7 +281,16 @@ a {
 	font-size:12px;
 }
 
-#btCloseCredits {
+#creditosE {
+	display:block;
+	float:none;
+	clear:both;
+	padding:0px 0px 5px 0px;
+	margin:0px 0px 10px 0px;
+	font-size:12px;
+}
+
+.btCloseCredits {
 	/*background:#6F0;*/
 	background-color:transparent;
 	background:url(../img/bt_closeCerdits.png) no-repeat;
@@ -289,7 +302,7 @@ a {
 	width:24px;
 	height:24px;
 }
-#btCloseCredits:hover {
+.btCloseCredits:hover {
 	/*background:#6F0;*/
 	background:url(../img/bt_closeCerdits.png) no-repeat;
 	background-position:-24px 0px;
@@ -525,6 +538,16 @@ a {
 	width:156px;
 	height:33px;
 	/*margin:41px 10px 0px 0px;*/
+}
+
+#logoBacPresentacion {
+	background-color:#666;
+	background-image:url(../img/logo_bac.png);
+	
+	width:130px;
+	height:60px;
+	
+	margin:0px auto 10px auto;
 }
 
 #btglosario {
