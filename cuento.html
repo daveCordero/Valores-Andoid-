@@ -299,7 +299,7 @@ function playAudio() {
 				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.mp3');
 			}
 			else if (android > -1) {
-				//alert('android 16');
+				//alert('android append playerCuento');
 				//audioElement.setAttribute('src', 'http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.ogg');
 				$("playerCuento").append('<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.ogg"/>');
 			}
@@ -839,42 +839,311 @@ $(document).ready(function() {
 		//cuentos niños
 		case '07'://La union
 			$('head').append('<link href="css/cuento_07.css" rel="stylesheet" type="text/css" />');
+			
+			//iOS y Safari no reconocen .ogg
+			if(isiPhone > -1) {
+				//alert('iphone 22');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_UNION.mp3');
+			}
+			else if(isiPod > -1) {
+				//alert('ipod');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_UNION.mp3');
+			}
+			else if(isiPad > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_UNION.mp3');
+			}
+			else if(isSafari > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_UNION.mp3');
+			}
+			else if (android > -1) {
+				//alert('android 16');
+				//audioElement.setAttribute('src', 'http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_UNION.ogg');
+				$("playerCuento").append('<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_UNION.ogg"/>');
+			}
+			else {
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_UNION.ogg');
+			}
+			//fin iOS y Safari no reconocen .ogg
 		break;
 		
 		case '08'://La aventura de la perrita Luna
 			$('head').append('<link href="css/cuento_08.css" rel="stylesheet" type="text/css" />');
+			
+			//iOS y Safari no reconocen .ogg
+			if(isiPhone > -1) {
+				//alert('iphone 22');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.mp3');
+			}
+			else if(isiPod > -1) {
+				//alert('ipod');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.mp3');
+			}
+			else if(isiPad > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.mp3');
+			}
+			else if(isSafari > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.mp3');
+			}
+			else if (android > -1) {
+				//alert('android append playerCuento');
+				//audioElement.setAttribute('src', 'http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.ogg');
+				$("playerCuento").append('<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.ogg"/>');
+			}
+			else {
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.ogg');
+			}
+			//fin iOS y Safari no reconocen .ogg
 		break;
 		
 		case '09'://La princesa triste
 			$('head').append('<link href="css/cuento_09.css" rel="stylesheet" type="text/css" />');
+			
+			//iOS y Safari no reconocen .ogg
+			if(isiPhone > -1) {
+				//alert('iphone 22');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_PRINCESA_TRISTE.mp3');
+			}
+			else if(isiPod > -1) {
+				//alert('ipod');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_PRINCESA_TRISTE.mp3');
+			}
+			else if(isiPad > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_PRINCESA_TRISTE.mp3');
+			}
+			else if(isSafari > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_PRINCESA_TRISTE.mp3');
+			}
+			else if (android > -1) {
+				//alert('android 16');
+				//audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_PRINCESA_TRISTE.ogg');
+				$("playerCuento").append('<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_PRINCESA_TRISTE.ogg"/>');
+			}
+			else {
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_PRINCESA_TRISTE.ogg');
+			}
+			//fin iOS y Safari no reconocen .ogg
 		break;
 		
 		case '10'://El colibrí y la libertad
 			$('head').append('<link href="css/cuento_10.css" rel="stylesheet" type="text/css" />');
+			
+			//iOS y Safari no reconocen .ogg
+			if(isiPhone > -1) {
+				//alert('iphone 22');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/EL_COLIBRI_Y_LA_LIBERTAD.mp3');
+			}
+			else if(isiPod > -1) {
+				//alert('ipod');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/EL_COLIBRI_Y_LA_LIBERTAD.mp3');
+			}
+			else if(isiPad > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/EL_COLIBRI_Y_LA_LIBERTAD.mp3');
+			}
+			else if(isSafari > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/EL_COLIBRI_Y_LA_LIBERTAD.mp3');
+			}
+			else if (android > -1) {
+				//alert('android 16');
+				//audioElement.setAttribute('src', 'http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/EL_COLIBRI_Y_LA_LIBERTAD.ogg');
+				$("playerCuento").append('<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/EL_COLIBRI_Y_LA_LIBERTAD.ogg"/>');
+			}
+			else {
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/EL_COLIBRI_Y_LA_LIBERTAD.ogg');
+			}
+			//fin iOS y Safari no reconocen .ogg
 		break;
 		
 		case '11'://Pueblo Paz y pueblo Sucio
 			$('head').append('<link href="css/cuento_11.css" rel="stylesheet" type="text/css" />');
+			
+			//iOS y Safari no reconocen .ogg
+			if(isiPhone > -1) {
+				//alert('iphone 22');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/PUEBLO_PAZ_Y_PUEBLO_SUCIO.mp3');
+			}
+			else if(isiPod > -1) {
+				//alert('ipod');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/PUEBLO_PAZ_Y_PUEBLO_SUCIO.mp3');
+			}
+			else if(isiPad > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/PUEBLO_PAZ_Y_PUEBLO_SUCIO.mp3');
+			}
+			else if(isSafari > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/PUEBLO_PAZ_Y_PUEBLO_SUCIO.mp3');
+			}
+			else if (android > -1) {
+				//alert('android 16');
+				//audioElement.setAttribute('src', 'http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/PUEBLO_PAZ_Y_PUEBLO_SUCIO.ogg');
+				$("playerCuento").append('<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/PUEBLO_PAZ_Y_PUEBLO_SUCIO.ogg"/>');
+			}
+			else {
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/PUEBLO_PAZ_Y_PUEBLO_SUCIO.ogg');
+			}
+			//fin iOS y Safari no reconocen .ogg
 		break;
 		
 		case '12'://Los títeres y el carpintero
 			$('head').append('<link href="css/cuento_12.css" rel="stylesheet" type="text/css" />');
+			
+			//iOS y Safari no reconocen .ogg
+			if(isiPhone > -1) {
+				//alert('iphone 22');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LOS_TITERES_Y_EL_CARPINTERO.mp3');
+			}
+			else if(isiPod > -1) {
+				//alert('ipod');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LOS_TITERES_Y_EL_CARPINTERO.mp3');
+			}
+			else if(isiPad > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LOS_TITERES_Y_EL_CARPINTERO.mp3');
+			}
+			else if(isSafari > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LOS_TITERES_Y_EL_CARPINTERO.mp3');
+			}
+			else if (android > -1) {
+				//alert('android 16');
+				//audioElement.setAttribute('src', 'http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LOS_TITERES_Y_EL_CARPINTERO.ogg');
+				$("playerCuento").append('<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LOS_TITERES_Y_EL_CARPINTERO.ogg"/>');
+			}
+			else {
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LOS_TITERES_Y_EL_CARPINTERO.ogg');
+			}
+			//fin iOS y Safari no reconocen .ogg
 		break;
 		
 		case '13'://La flor
 			$('head').append('<link href="css/cuento_13.css" rel="stylesheet" type="text/css" />');
+			
+			//iOS y Safari no reconocen .ogg
+			if(isiPhone > -1) {
+				//alert('iphone 22');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_FLOR.mp3');
+			}
+			else if(isiPod > -1) {
+				//alert('ipod');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_FLOR.mp3');
+			}
+			else if(isiPad > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_FLOR.mp3');
+			}
+			else if(isSafari > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_FLOR.mp3');
+			}
+			else if (android > -1) {
+				//alert('android 16');
+				//audioElement.setAttribute('src', 'http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_FLOR.ogg');
+				$("playerCuento").append('<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_FLOR.ogg"/>');
+			}
+			else {
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_FLOR.ogg');
+			}
+			//fin iOS y Safari no reconocen .ogg
 		break;
 		
 		case '14'://La disciplina nos hace felices
 			$('head').append('<link href="css/cuento_14.css" rel="stylesheet" type="text/css" />');
+			
+			//iOS y Safari no reconocen .ogg
+			if(isiPhone > -1) {
+				//alert('iphone 22');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_DISIPLINA_NOS_HACE_FELICES.mp3');
+			}
+			else if(isiPod > -1) {
+				//alert('ipod');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_DISIPLINA_NOS_HACE_FELICES.mp3');
+			}
+			else if(isiPad > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_DISIPLINA_NOS_HACE_FELICES.mp3');
+			}
+			else if(isSafari > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_DISIPLINA_NOS_HACE_FELICES.mp3');
+			}
+			else if (android > -1) {
+				//alert('android 16');
+				//audioElement.setAttribute('src', 'http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_DISIPLINA_NOS_HACE_FELICES.ogg');
+				$("playerCuento").append('<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_DISIPLINA_NOS_HACE_FELICES.ogg"/>');
+			}
+			else {
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/LA_DISIPLINA_NOS_HACE_FELICES.ogg');
+			}
+			//fin iOS y Safari no reconocen .ogg
 		break;
 		
 		case '15'://Un paseo al campo
 			$('head').append('<link href="css/cuento_15.css" rel="stylesheet" type="text/css" />');
+			
+			//iOS y Safari no reconocen .ogg
+			if(isiPhone > -1) {
+				//alert('iphone 22');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/UN_PASEO_AL_CAMPO.mp3');
+			}
+			else if(isiPod > -1) {
+				//alert('ipod');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/UN_PASEO_AL_CAMPO.mp3');
+			}
+			else if(isiPad > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/UN_PASEO_AL_CAMPO.mp3');
+			}
+			else if(isSafari > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/UN_PASEO_AL_CAMPO.mp3');
+			}
+			else if (android > -1) {
+				//alert('android 16');
+				//audioElement.setAttribute('src', 'http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/UN_PASEO_AL_CAMPO.ogg');
+				$("playerCuento").append('<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/UN_PASEO_AL_CAMPO.ogg"/>');
+			}
+			else {
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/UN_PASEO_AL_CAMPO.ogg');
+			}
+			//fin iOS y Safari no reconocen .ogg
 		break;
 		
 		case '16'://El afecto a los perros
 			$('head').append('<link href="css/cuento_16.css" rel="stylesheet" type="text/css" />');
+			
+			//iOS y Safari no reconocen .ogg
+			if(isiPhone > -1) {
+				//alert('iphone 22');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/NO_DEJARE_MI_SUENO.mp3');
+			}
+			else if(isiPod > -1) {
+				//alert('ipod');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/NO_DEJARE_MI_SUENO.mp3');
+			}
+			else if(isiPad > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/NO_DEJARE_MI_SUENO.mp3');
+			}
+			else if(isSafari > -1) {
+				//alert('ipad');
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/NO_DEJARE_MI_SUENO.mp3');
+			}
+			else if (android > -1) {
+				//alert('android 16');
+				$("playerCuento").append('<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/NO_DEJARE_MI_SUENO.ogg"/>');
+			}
+			else {
+				audioElement.setAttribute('src', 'audio/cuentos_ninos/NO_DEJARE_MI_SUENO.ogg');
+			}
+			//fin iOS y Safari no reconocen .ogg
 		break;
 		
 	}//fin switch cuento
@@ -1039,10 +1308,11 @@ $(document).ready(function() {
 			</audio>
             <video src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.mp3" onclick="this.play();"></video>-->
             
-            <audio controls="true" align="center" style="width:400px; margin:30px auto 0px auto;" id="playerCuento2">
-            	<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.ogg"/>
+            <audio controls="true" align="center" style="width:400px; margin:30px auto 0px auto;" id="playerCuento">
+            	<!--<source src="http://librosparatodoscr.com/apps/valores/audio/cuentos_ninos/LA_AVENTURA_DE_LA_PERRITA_LUNA.ogg"/>-->
 				Su navegador no soporta audio HTML5.
 			</audio>
+            
         </div><!--/#dialog4-->
 		
 		<!-- Mask to cover the whole screen -->
