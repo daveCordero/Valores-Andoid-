@@ -13,3 +13,18 @@
 	background-image:url(../img/titulo_zoom_s01.png);
 }
 
+/*esconde btns de audio ya que no se grabó el audio de los cuentos principales*/
+#playbtn {
+	display:none;
+}
+#pausebtn {
+	display:none;
+}
+#frasesbtn {
+	left:225px;
+}
+#zoombtn {
+	left:310px;
+}
+/*fin esconde btns de audio...*/
+

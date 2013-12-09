@@ -324,14 +324,15 @@ $(document).ready(function() {
 	
 	<div id="general">
 		
-        <div id="pantalla01" class="disNone pantallas floatNoneClearBoth marginAuto">
+        <div id="pantalla01" class="disblock pantallas floatNoneClearBoth marginAuto">
+        <!--<div id="pantalla01" class="disNone pantallas floatNoneClearBoth marginAuto">-->
 			
 			<div class="disNone posAbsolute" id="nube01"></div>
 			<div class="disNone posAbsolute" id="nube02"></div>
             <div class="disNone posAbsolute" id="nube03"></div>
 			
             <a class="disblock posAbsolute tran100 btnLista" id="btHome" href="javascript:var proxPantalla = 'index.html'" onClick="flipPage();"></a>
-            <a class="disblock posAbsolute tran100 btnLista" id="btInfo" href="javascript:void(0)" onClick="goInfo();"></a>
+            <!--<a class="disblock posAbsolute tran100 btnLista" id="btInfo" href="javascript:void(0)" onClick="goInfo();"></a>-->
             
 			<div class="disblock posAbsolute left50" id="tituloValores"></div>
             
@@ -375,14 +376,12 @@ $(document).ready(function() {
 				<!--</div> fin swiper-wrapper -->
 			</div><!-- fin contNinosHome -->
 			
-			<div id="logosBlock" class="disblock posAbsolute">
-            	<!--<a href="https://www.bac.net/bacsanjose/" target="_blank" class="disblock posAbsolute alpha80hover patrocinador" id="logoBac"></a>
-                <a href="http://www.gruponacion.co.cr" target="_blank" class="disblock posAbsolute alpha80hover tran100 patrocinador" id="logoNacion"></a>-->
-            </div><!--/#logosBlock-->
+			<div id="logosBlock" class="disblock posAbsolute"></div><!--/#logosBlock-->
 			
 		</div><!--/#pantalla01-->
 		
-		<div id="pantalla00" class="disblock pantallas floatNoneClearBoth marginAuto">
+		<div id="pantalla00" class="disNone pantallas floatNoneClearBoth marginAuto">
+        <!--<div id="pantalla00" class="disblock pantallas floatNoneClearBoth marginAuto">-->
 			<div id="welcome" class="disblock posAbsolute borRadius20">
 				
 				<a id="icoClose" class="icoGrande borRadius50Por" onclick="closeWelcome();" href="javascript:void(0)"></a>
